@@ -1,13 +1,18 @@
-version: 0.6.14-beta.1
+version: 0.6.15-beta.1
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.14-beta.1/VR-Norte-Studio-0.6.14-beta.1-x64.exe
-    sha512: 6oJHRC/989CzUlqRUICzf3eRUaNx+X979JyYO//kvdxg5UzZyss3x2R123hEfFoMsSneCwZN/erb/JWFy6Z51Q==
-    size: 599803889
-releaseDate: '2026-11-01T16:35:52Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.15-beta.1/VR-Norte-Studio-0.6.15-beta.1-x64.exe
+    sha512: N9vOMC2EOOcmJ+koVajk4p124ALcGNFi/9wWkcBh33NHMXFKI4bkRd4XXC0rxUjXK6xRJYkzm7E9Ic0/1rSXUA==
+    size: 599807372
+releaseDate: '2026-11-01T19:08:07Z'
 releaseNotes: |
+  ### Novidades
+  - feat(updates): T3-style sidebar update button and Atualizações settings tab
+
   ### Correções
-  - fix(updates): make "Reiniciar para atualizar" actually install
-  - fix(release): keep dev and beta level with main after each publication
+  - fix(updates): keep update button hover, honest restart text, public releases link
 
   ### Outros
-  - chore(release): start 0.6.14
+  - test(ui): include the new Atualizações tab in the settings category lists
+  - docs(release): note removal of the defective 0.6.13 releases
+  - docs(release): record F5 completion and the defects it uncovered
+  - chore(release): start 0.6.15
