@@ -1,10 +1,13 @@
-version: 0.6.13-beta.2
+version: 0.6.14-beta.1
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.13-beta.2/VR-Norte-Studio-0.6.13-beta.2-x64.exe
-    sha512: +NttRfxeDEZX8Ca+ZMQY8O5FAw4JR8mhuUMYsA2cLw6MfqbfkrSm2AyKK/2WpNuk2xDw+Dbc4Mc3Nfp9riFetA==
-    size: 599809968
-releaseDate: '2026-11-01T15:32:31Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.14-beta.1/VR-Norte-Studio-0.6.14-beta.1-x64.exe
+    sha512: 6oJHRC/989CzUlqRUICzf3eRUaNx+X979JyYO//kvdxg5UzZyss3x2R123hEfFoMsSneCwZN/erb/JWFy6Z51Q==
+    size: 599803889
+releaseDate: '2026-11-01T16:35:52Z'
 releaseNotes: |
   ### Correções
-  - fix(packaging): ship the build identity inside the EXE
-  - fix(updates): start every install on Estável and treat a missing feed as up to date
+  - fix(updates): make "Reiniciar para atualizar" actually install
+  - fix(release): keep dev and beta level with main after each publication
+
+  ### Outros
+  - chore(release): start 0.6.14
