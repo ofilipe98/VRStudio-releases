@@ -1,46 +1,13 @@
-version: 0.6.13
+version: 0.6.14
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.13/VR-Norte-Studio-0.6.13-x64.exe
-    sha512: dPJ0oQAS26U/oBJ/Z3sGn+NedFvSlwnQS2crTcR5R0wswextb9GiudqH1LkERF4Ua8TvxPJjVC0D2mM+5/IS0g==
-    size: 599767805
-releaseDate: '2026-11-01T15:51:59Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.14/VR-Norte-Studio-0.6.14-x64.exe
+    sha512: D+Lhud879iv4TdinZwZmBG2xMzK52u7Gj1cTGW5R+GQzrBAZGq6ROAbZoxIZlD4qkA1Hr6x5Pt+CvfkXyr9JpQ==
+    size: 599763544
+releaseDate: '2026-11-01T17:08:40Z'
 releaseNotes: |
-  ### Novidades
-  - feat(updates): implement QML bridge, UI components, and apply runner (F4)
-  - feat(packaging): implement protected release build and NSIS installer (F2)
-  - feat(updates): implement updater core with channel rules, feed and state machine
-  - feat(release): implement F3 release orchestrator for beta and stable channels
-  - feat(startup): keep installed-app data outside the program folder
-  - feat(release): switch to X.Y.Z versions and add Beta build identity
-  - feat(ui): align conversation sidebar visuals and titlebar parity with t3 code
-  - feat(ui): align context handoff and markdown image lightbox with t3 code
-
   ### Correções
-  - fix(packaging): ship the build identity inside the EXE
-  - fix(updates): start every install on Estável and treat a missing feed as up to date
-  - fix(updates): adapt updates section for narrow viewports and restore tab focus chain
-  - fix(updates): eliminate psutil dependency, run prepare in background worker, and add preparing pill state
-  - fix(updates): harden update runner, helper script lifecycle, and backup retention
-  - fix(packaging): harden NSIS installer versions, channel shortcuts, and process lifecycle
-  - fix(release): require keyword dry_run and eliminate retry on TypeError
-  - fix(release): address tag publication, dev promotion, and safety checks in release orchestrator
-
-  ### Desempenho
-  - perf(chat): preload all conversations at startup
-  - perf(chat): accelerate conversation switching with validated replay caches
-  - perf(chat): measure first-token latency and prewarm Claude while typing
-  - perf(ui): build work group members only while the group is expanded
-  - perf(code): speed up coverage checks with covering indexes
-  - perf(ui): probe graphics backend and speed up chat render
-  - perf(apps): open decompiled package import dialog without hashing every source
-  - perf: verify shared packages once and keep tool rows alive
+  - fix(updates): make "Reiniciar para atualizar" actually install
+  - fix(release): keep dev and beta level with main after each publication
 
   ### Outros
-  - docs(release): record F2-F4 completion and the known install limit
-  - spike(packaging): assess Nuitka compilation and code protection for F2
-  - test(code): write synthetic ERP JARs with a fixed entry time
-  - test(startup): isolate app path tests from the checkout .env
-  - docs(release): record F1, F3 and F4 status in the channels plan
-  - docs: activate the dev -> beta -> main release flow
-  - Corrige aviso de handoff na auditoria
-  - chore(release): promote version to 0.6.13-1
+  - chore(release): start 0.6.14
