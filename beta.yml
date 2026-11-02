@@ -1,22 +1,67 @@
-version: 0.6.15-beta.2
+version: 0.6.15-beta.3
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.15-beta.2/VR-Norte-Studio-0.6.15-beta.2-x64.exe
-    sha512: 9fRs7uLd4cshBLywenRxJgB4dMeB8iBiCDVo+zG7htJf8Iabnlypm6X0BqrW2rThrmBQS8f9g3WD/csaFxBdmA==
-    size: 599931005
-releaseDate: '2026-11-02T02:21:57Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.15-beta.3/VR-Norte-Studio-0.6.15-beta.3-x64.exe
+    sha512: cJem4E0I0reknUoXf6cYfPOS4vIt/x25E9qIrDdbfeOkcoYNZyIgPvt0sdTjROWEuohLLSQkbi3IPsC0DNTsWQ==
+    size: 600129241
+releaseDate: '2026-11-02T16:39:52Z'
 releaseNotes: |
-  ### Novidades
-  - feat(packages): add batch decompilation and cross-package deduplication
+  **v0.6.15-beta.3** · 46 mudanças de 1 colaborador
 
-  ### Correções
-  - fix(tests): block the installed Codex app-server like the other probes
-  - fix(tests): keep the Codex change to tree termination only
-  - fix(tests): guard against real provider CLI launches and fix minimap fixtures
-  - fix(chat): stop rescanning the project folder on every conversation switch
-  - fix(ui): stop background Settings build from stalling the chat under accessibility
-  - fix(packaging): rebuild the web client on every release build
-  - fix: break updates import cycle, fit batch button at 390 px, pin test memory
-  - fix(packages): show the shared item's release instead of "undefined"
+  - Abertura mais leve: o Studio volta a usar a GPU quando ela funciona e abre uma única janela por vez, como o T3 Code.
+  - Seletor de modelos no padrão do T3: modelo separado do esforço, Gemini em uma linha por modelo e atalhos Ctrl+1–9.
+  - Configurações → Provedores mostra a conta na hora e confere em segundo plano; atualizar um provider não pede mais confirmação.
+  - Auditoria DB respeita o perfil escolhido, inclusive Acesso total; auditorias existentes começam em Supervisionado.
 
-  ### Outros
-  - docs: update AGENTS.md and docs/DEVELOPMENT.md for installer cleanup and GUI telemetry
+  ### Mais 17 correções e melhorias de desempenho.
+
+  <details>
+  <summary>Registro completo</summary>
+
+  * feat(providers): identify Claude processes as vrstudio
+  * fix(providers): show the last known CLI account while it is rechecked
+  * fix(ui): number model picker shortcuts by visible row
+  * feat(ui): move Antigravity thinking levels to the composer effort chip
+  * fix(ui): center the providers refresh button content
+  * fix(ui): set the anchored menu target explicitly; update stale source assertions
+  * fix(timeline): keep the content fallback for every row but citation-only user messages
+  * test(timeline): cover citation bubbles, copy text and captures
+  * fix(timeline): show only typed text in sent citation bubbles
+  * fix(ui): keep the resumable processing cancel in the version tab
+  * test(ui): cover the reorganized apps settings page
+  * feat(ui): reorganize apps settings into status, catalog, packages and disclosures
+  * feat(audit): honor the composer approval profile in Monitor audits
+  * WIP: audit honors the selected approval profile (unvalidated, Gemini usage limit)
+  * style(timeline): separate the citation range and highlight helpers
+  * feat(timeline): t3 citation chips, toolbar and source pulse
+  * feat(ui): t3 citation chips in the composer and sent messages
+  * refactor(citations): share the t3 citation label and comment rules
+  * WIP: citation UI T3 parity (unvalidated, Gemini usage limit)
+  * feat(ui): finish conversation context menu T3 parity
+  * WIP: context menu parity, Gemini progress (unvalidated, usage limit)
+  * WIP: conversation context menu T3 parity (unvalidated, Terra usage limit)
+  * feat(ui): clarify apps settings naming and version navigation
+  * feat(ui): collapse Antigravity models into base rows with thinking-level side panel
+  * feat(antigravity): annotate model items with grouping metadata for presentation
+  * Add ID-preserving Antigravity model grouping primitive
+  * feat(ui): match scheduled tasks page with T3 layout and refinement
+  * fix(timeline): style Mermaid diagram header without full-width hover bar
+  * fix(ui): compare the media viewer breakpoint in CSS pixels
+  * fix(tests): expect the Portuguese handoff label in the Chromium scenario
+  * Validate startup login and audit approval behavior
+  * WIP: startup login once, remove agent setup step, audit approval honesty (unvalidated)
+  * fix(ui): bring the running Studio forward without un-maximizing it
+  * Protect graphics startup and enforce single instance
+  * feat(ui): snooze button and menu on sidebar rows, darker footer hover
+  * Fix provider update advisory placement
+  * fix(updates): split the release notes parser and label the folded log in Portuguese
+  * feat(ui): match T3 sidebar update button and popover parity without click aura
+  * Fix expanded timeline media overlay
+  * fix(ui): keep the taskbar identity derived from the executable
+  * fix(ui): remove mouse focus ring, remove path saved toast, and resolve taskbar icon
+  * Improve composer typography and copy feedback
+  * fix(ui): carry the sidebar grain into the split handle edge
+  * fix(usage): keep Antigravity quota titles in Portuguese
+  * feat(usage): display all Antigravity quota windows without family collapsing
+  * fix(ui): translate the settled shelf and settle action to Portuguese
+
+  </details>
