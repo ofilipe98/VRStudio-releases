@@ -1,44 +1,27 @@
-version: 0.6.15-beta.4
+version: 0.6.15-beta.5
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.15-beta.4/Keystone-Studio-0.6.15-beta.4-x64.exe
-    sha512: 1PwPkonOdJD2QLFUjkGmg13asBa8famFTcHKVHbDK7g9I9A7lmuURCXnnQB6h6nLNKJORNOJ4rG9MHmtzjwkEA==
-    size: 600785772
-releaseDate: '2026-11-02T21:35:05Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.15-beta.5/Keystone-Studio-0.6.15-beta.5-x64.exe
+    sha512: d5yptAcPZetkuZ55mIYv/OfySHydGTQkUJbo5tFxuG5YsEp5RmzmqNsShoTtvvAXW5VDC42gyubkbR0BYs+w6g==
+    size: 600802043
+releaseDate: '2026-11-02T23:19:29Z'
 releaseNotes: |
-  **v0.6.15-beta.4** · 23 mudanças de 1 colaborador
+  **v0.6.15-beta.5** · 7 mudanças de 1 colaborador
 
-  - **Keystone Studio.** O app tem nome e logo novos, e a nova aba Sobre mostra versão, canal, renderização e pastas, com diagnóstico para copiar.
-  - **Claude e GPT no Antigravity.** A conta Google passa a oferecer Claude Opus, Claude Sonnet e GPT-OSS, com o nível de raciocínio de cada modelo no chip de esforço.
-  - **Texto nítido na versão instalada.** O EXE agora leva o shader de texto do Studio, e o modo software usa texto em tons de cinza, sem franjas coloridas.
-  - **Abertura mais rápida.** O chat e as Configurações são preparados em segundo plano, e o catálogo de Aplicativos abre recolhido.
+  - **Um único Studio por vez.** Fechar o app durante uma tarefa longa não abre mais um segundo Studio sobre o banco travado; uma nova abertura avisa e inicia sozinha quando o anterior termina.
+  - **Remoção de pacote segura ao fechar.** Fechar o Studio no meio da remoção de um pacote descompilado cancela a operação, preserva os arquivos e libera o banco.
+  - **Ícone novo nos atalhos.** A atualização troca o ícone antigo dos atalhos do Menu Iniciar e da área de trabalho pelo da Keystone.
 
-  ### Mais 12 correções e melhorias de desempenho.
+  ### Mais 6 correções e melhorias de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * feat(antigravity): offer Claude and GPT models with runtime thinking levels
-  * fix(ui): scale the About tab breakpoint with the window zoom
-  * feat(settings): add the branded About tab
-  * docs(brand): present bundled readme and launchers with the active profile
-  * feat(release): brand installer names and publish stable code releases
-  * fix(ui): open the collapsed catalog when an app batch fails
-  * test(brand): guard single-source names and refresh profile tests
-  * feat(packaging): brand the EXE, installer and update flow
-  * feat(web): build the client and API copy from the brand profile
-  * refactor(brand): resolve desktop copy from the active profile
-  * feat(brand): add versioned display profiles and Keystone artwork
-  * perf(ui): compile the chat shell in the background before the first frame
-  * perf(apps): resolve the default VR package from the cached list
-  * perf(ui): defer settings QML compilation until idle preload
-  * perf(code): skip the portable manifest restore while the catalog is unchanged
-  * fix(code): publish the release manifest for imported decompiled packages
-  * feat(ui): collapse the applications catalog by default
-  * fix(ui): keep a single decompilation settings entry
-  * chore(logging): record whether the native text shader is active at startup
-  * fix(packaging): ship the native text shader in the EXE
-  * fix(rendering): grayscale text in the Windows software renderer
-  * fix(updates): reopen the updated Studio with its launch environment
-  * fix(updates): match the t3 release notes popover layout
+  * fix(code): name the product from the brand profile in the removal message
+  * fix(ui): never join arbitrary threads before releasing the instance
+  * fix(ui): read the complete activation reply before deciding
+  * fix(ui): hold the single-instance lock until the process exits
+  * fix(code): cancel package deletion when the Studio closes
+  * test: keep app.main() from leaking the process environment
+  * fix(installer): refresh shortcut icons after rebranding
 
   </details>
