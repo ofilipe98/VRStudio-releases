@@ -1,18 +1,22 @@
-version: 0.6.15-beta.1
+version: 0.6.15-beta.2
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.15-beta.1/VR-Norte-Studio-0.6.15-beta.1-x64.exe
-    sha512: N9vOMC2EOOcmJ+koVajk4p124ALcGNFi/9wWkcBh33NHMXFKI4bkRd4XXC0rxUjXK6xRJYkzm7E9Ic0/1rSXUA==
-    size: 599807372
-releaseDate: '2026-11-01T19:08:07Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.15-beta.2/VR-Norte-Studio-0.6.15-beta.2-x64.exe
+    sha512: 9fRs7uLd4cshBLywenRxJgB4dMeB8iBiCDVo+zG7htJf8Iabnlypm6X0BqrW2rThrmBQS8f9g3WD/csaFxBdmA==
+    size: 599931005
+releaseDate: '2026-11-02T02:21:57Z'
 releaseNotes: |
   ### Novidades
-  - feat(updates): T3-style sidebar update button and Atualizações settings tab
+  - feat(packages): add batch decompilation and cross-package deduplication
 
   ### Correções
-  - fix(updates): keep update button hover, honest restart text, public releases link
+  - fix(tests): block the installed Codex app-server like the other probes
+  - fix(tests): keep the Codex change to tree termination only
+  - fix(tests): guard against real provider CLI launches and fix minimap fixtures
+  - fix(chat): stop rescanning the project folder on every conversation switch
+  - fix(ui): stop background Settings build from stalling the chat under accessibility
+  - fix(packaging): rebuild the web client on every release build
+  - fix: break updates import cycle, fit batch button at 390 px, pin test memory
+  - fix(packages): show the shared item's release instead of "undefined"
 
   ### Outros
-  - test(ui): include the new Atualizações tab in the settings category lists
-  - docs(release): note removal of the defective 0.6.13 releases
-  - docs(release): record F5 completion and the defects it uncovered
-  - chore(release): start 0.6.15
+  - docs: update AGENTS.md and docs/DEVELOPMENT.md for installer cleanup and GUI telemetry
