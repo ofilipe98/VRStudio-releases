@@ -1,13 +1,120 @@
-version: 0.6.14
+version: 0.6.15
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.14/VR-Norte-Studio-0.6.14-x64.exe
-    sha512: D+Lhud879iv4TdinZwZmBG2xMzK52u7Gj1cTGW5R+GQzrBAZGq6ROAbZoxIZlD4qkA1Hr6x5Pt+CvfkXyr9JpQ==
-    size: 599763544
-releaseDate: '2026-11-01T17:08:40Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.15/Keystone-Studio-0.6.15-x64.exe
+    sha512: VROjxfS2UPnx/MdxflPRyM0NWcc1e69KQ3hDZpHA2fs5mqyBIVi7djqdIcMDVulGKHyG3KZQk6N33T5S+tF+CA==
+    size: 600758556
+releaseDate: '2026-11-02T23:34:39Z'
 releaseNotes: |
-  ### Correções
-  - fix(updates): make "Reiniciar para atualizar" actually install
-  - fix(release): keep dev and beta level with main after each publication
+  **v0.6.15** · 99 mudanças de 1 colaborador
 
-  ### Outros
-  - chore(release): start 0.6.14
+  - **Keystone Studio.** O app tem nome e logo novos e uma aba Sobre com versão, canal, renderização, pastas e diagnóstico para copiar.
+  - **Claude e GPT no Antigravity.** A conta Google oferece Claude Opus, Claude Sonnet e GPT-OSS, e o seletor de modelos segue o padrão do T3, com o nível de raciocínio no chip de esforço.
+  - **Abertura mais rápida e estável.** O Studio usa a GPU quando ela funciona, abre só uma vez por pasta de dados e mostra o texto nítido também na versão instalada.
+  - **Remoção de pacote segura.** Fechar o Studio no meio da remoção de um pacote descompilado cancela a operação e preserva os dados.
+
+  ### Mais 51 correções e melhorias de desempenho.
+
+  <details>
+  <summary>Registro completo</summary>
+
+  * fix(code): name the product from the brand profile in the removal message
+  * fix(ui): never join arbitrary threads before releasing the instance
+  * fix(ui): read the complete activation reply before deciding
+  * fix(ui): hold the single-instance lock until the process exits
+  * fix(code): cancel package deletion when the Studio closes
+  * test: keep app.main() from leaking the process environment
+  * fix(installer): refresh shortcut icons after rebranding
+  * feat(antigravity): offer Claude and GPT models with runtime thinking levels
+  * fix(ui): scale the About tab breakpoint with the window zoom
+  * feat(settings): add the branded About tab
+  * docs(brand): present bundled readme and launchers with the active profile
+  * feat(release): brand installer names and publish stable code releases
+  * fix(ui): open the collapsed catalog when an app batch fails
+  * test(brand): guard single-source names and refresh profile tests
+  * feat(packaging): brand the EXE, installer and update flow
+  * feat(web): build the client and API copy from the brand profile
+  * refactor(brand): resolve desktop copy from the active profile
+  * feat(brand): add versioned display profiles and Keystone artwork
+  * perf(ui): compile the chat shell in the background before the first frame
+  * perf(apps): resolve the default VR package from the cached list
+  * perf(ui): defer settings QML compilation until idle preload
+  * perf(code): skip the portable manifest restore while the catalog is unchanged
+  * fix(code): publish the release manifest for imported decompiled packages
+  * feat(ui): collapse the applications catalog by default
+  * fix(ui): keep a single decompilation settings entry
+  * chore(logging): record whether the native text shader is active at startup
+  * fix(packaging): ship the native text shader in the EXE
+  * fix(rendering): grayscale text in the Windows software renderer
+  * fix(updates): reopen the updated Studio with its launch environment
+  * fix(updates): match the t3 release notes popover layout
+  * feat(providers): identify Claude processes as vrstudio
+  * fix(providers): show the last known CLI account while it is rechecked
+  * fix(ui): number model picker shortcuts by visible row
+  * feat(ui): move Antigravity thinking levels to the composer effort chip
+  * fix(ui): center the providers refresh button content
+  * fix(ui): set the anchored menu target explicitly; update stale source assertions
+  * fix(timeline): keep the content fallback for every row but citation-only user messages
+  * test(timeline): cover citation bubbles, copy text and captures
+  * fix(timeline): show only typed text in sent citation bubbles
+  * fix(ui): keep the resumable processing cancel in the version tab
+  * test(ui): cover the reorganized apps settings page
+  * feat(ui): reorganize apps settings into status, catalog, packages and disclosures
+  * feat(audit): honor the composer approval profile in Monitor audits
+  * WIP: audit honors the selected approval profile (unvalidated, Gemini usage limit)
+  * style(timeline): separate the citation range and highlight helpers
+  * feat(timeline): t3 citation chips, toolbar and source pulse
+  * feat(ui): t3 citation chips in the composer and sent messages
+  * refactor(citations): share the t3 citation label and comment rules
+  * WIP: citation UI T3 parity (unvalidated, Gemini usage limit)
+  * feat(ui): finish conversation context menu T3 parity
+  * WIP: context menu parity, Gemini progress (unvalidated, usage limit)
+  * WIP: conversation context menu T3 parity (unvalidated, Terra usage limit)
+  * feat(ui): clarify apps settings naming and version navigation
+  * feat(ui): collapse Antigravity models into base rows with thinking-level side panel
+  * feat(antigravity): annotate model items with grouping metadata for presentation
+  * Add ID-preserving Antigravity model grouping primitive
+  * feat(ui): match scheduled tasks page with T3 layout and refinement
+  * fix(timeline): style Mermaid diagram header without full-width hover bar
+  * fix(ui): compare the media viewer breakpoint in CSS pixels
+  * fix(tests): expect the Portuguese handoff label in the Chromium scenario
+  * Validate startup login and audit approval behavior
+  * WIP: startup login once, remove agent setup step, audit approval honesty (unvalidated)
+  * fix(ui): bring the running Studio forward without un-maximizing it
+  * Protect graphics startup and enforce single instance
+  * feat(ui): snooze button and menu on sidebar rows, darker footer hover
+  * Fix provider update advisory placement
+  * fix(updates): split the release notes parser and label the folded log in Portuguese
+  * feat(ui): match T3 sidebar update button and popover parity without click aura
+  * Fix expanded timeline media overlay
+  * fix(ui): keep the taskbar identity derived from the executable
+  * fix(ui): remove mouse focus ring, remove path saved toast, and resolve taskbar icon
+  * Improve composer typography and copy feedback
+  * fix(ui): carry the sidebar grain into the split handle edge
+  * fix(usage): keep Antigravity quota titles in Portuguese
+  * feat(usage): display all Antigravity quota windows without family collapsing
+  * fix(ui): translate the settled shelf and settle action to Portuguese
+  * fix(tests): block the installed Codex app-server like the other probes
+  * fix(tests): keep the Codex change to tree termination only
+  * fix(tests): guard against real provider CLI launches and fix minimap fixtures
+  * fix(chat): stop rescanning the project folder on every conversation switch
+  * fix(ui): stop background Settings build from stalling the chat under accessibility
+  * fix(packaging): rebuild the web client on every release build
+  * fix: break updates import cycle, fit batch button at 390 px, pin test memory
+  * fix(packages): show the shared item's release instead of "undefined"
+  * fix(packages): use coverage pipeline for cross-release reuse and fix batch queueing
+  * feat(packages): add batch decompilation and cross-package deduplication
+  * fix(chat): corrige visibilidade e alinha minimap da timeline ao padrao T3
+  * fix(ui): latch sidebar update button spin and honest base project removal
+  * fix(ui): measure page builds and name the page in hitch telemetry
+  * docs: update AGENTS.md and docs/DEVELOPMENT.md for installer cleanup and GUI telemetry
+  * fix(ui): configure GUI rotating file log and hitch telemetry
+  * fix(updates): clean up downloaded update installers
+  * fix(packaging): dispatch spelling worker in frozen executable
+  * test(ui): include the new Atualizações tab in the settings category lists
+  * fix(updates): keep update button hover, honest restart text, public releases link
+  * feat(updates): T3-style sidebar update button and Atualizações settings tab
+  * docs(release): note removal of the defective 0.6.13 releases
+  * docs(release): record F5 completion and the defects it uncovered
+  * chore(release): start 0.6.15
+
+  </details>
