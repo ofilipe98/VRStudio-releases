@@ -1,27 +1,22 @@
-version: 0.6.15-beta.5
+version: 0.6.16-beta.1
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.15-beta.5/Keystone-Studio-0.6.15-beta.5-x64.exe
-    sha512: d5yptAcPZetkuZ55mIYv/OfySHydGTQkUJbo5tFxuG5YsEp5RmzmqNsShoTtvvAXW5VDC42gyubkbR0BYs+w6g==
-    size: 600802043
-releaseDate: '2026-11-02T23:19:29Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.16-beta.1/Keystone-Studio-0.6.16-beta.1-x64.exe
+    sha512: m3TIafOF4pc8RlKBMFT5ayqWEn+zB36iTNafKJsMOs2ei8f2o5g39YfNJ7wVR6JeFG606EDjh25lkZ4xtjA8Tw==
+    size: 600847168
+releaseDate: '2026-11-03T12:31:17Z'
 releaseNotes: |
-  **v0.6.15-beta.5** · 7 mudanças de 1 colaborador
+  **v0.6.16-beta.1** · 4 mudanças de 1 colaborador
 
-  - **Um único Studio por vez.** Fechar o app durante uma tarefa longa não abre mais um segundo Studio sobre o banco travado; uma nova abertura avisa e inicia sozinha quando o anterior termina.
-  - **Remoção de pacote segura ao fechar.** Fechar o Studio no meio da remoção de um pacote descompilado cancela a operação, preserva os arquivos e libera o banco.
-  - **Ícone novo nos atalhos.** A atualização troca o ícone antigo dos atalhos do Menu Iniciar e da área de trabalho pelo da Keystone.
-
-  ### Mais 6 correções e melhorias de desempenho.
+  - **Interface.** Never create native threads on the GUI thread when reaching the chat.
+  - **Código.** Make portable decompiled package imports usable and recoverable.
+  - **Interface.** Stop waiting forever for preserved workers after the window closes.
 
   <details>
   <summary>Registro completo</summary>
 
-  * fix(code): name the product from the brand profile in the removal message
-  * fix(ui): never join arbitrary threads before releasing the instance
-  * fix(ui): read the complete activation reply before deciding
-  * fix(ui): hold the single-instance lock until the process exits
-  * fix(code): cancel package deletion when the Studio closes
-  * test: keep app.main() from leaking the process environment
-  * fix(installer): refresh shortcut icons after rebranding
+  * fix(ui): never create native threads on the GUI thread when reaching the chat
+  * fix(code): make portable decompiled package imports usable and recoverable
+  * fix(ui): stop waiting forever for preserved workers after the window closes
+  * chore(release): start 0.6.16
 
   </details>
