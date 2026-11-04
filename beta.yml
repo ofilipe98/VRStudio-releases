@@ -1,34 +1,21 @@
-version: 0.6.16-beta.4
+version: 0.6.17-beta.1
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.16-beta.4/Keystone-Studio-0.6.16-beta.4-x64.exe
-    sha512: 49UR949nhQ0unhJpiQhIJDiY/H1M0qqEK3NQEpG/4iHVcS8EyFUo2Sc6rbKLfzhG7gilFMmXY1SyFlf/zxVLSQ==
-    size: 601190410
-releaseDate: '2026-11-03T23:12:33Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.17-beta.1/Keystone-Studio-0.6.17-beta.1-x64.exe
+    sha512: JFMtLeIMTSBtGwIYJXyq3HfgyHf4uRU9twNba5RvZnAgotLEJL9H05E1/uWDZVPXcKhSWhp7y+Wr+D1XkvE7Dg==
+    size: 601212333
+releaseDate: '2026-11-04T00:48:32Z'
 releaseNotes: |
-  **v0.6.16-beta.4** · 13 mudanças de 1 colaborador
+  **v0.6.17-beta.1** · 2 mudanças de 1 colaborador
 
-  - **Configurações e lista de conversas mais rápidas.** Abrir Configurações não consulta mais o WMI para o nome do computador (de cerca de 1,2 s para 0,26 s), e atualizar a lista de conversas com mil conversas caiu de 3,3 s para 0,5 s.
-  - **Abertura mais leve.** O primeiro quadro da tela de carregamento aparece quase duas vezes mais rápido, a migração do banco na abertura é pulada quando não há nada a reparar e os timers da timeline e do terminal não criam mais threads nativas na interface.
-  - **Base de conhecimento e cliente web.** Gerar o INDEX da base usa uma fração da memória, a sincronização da Wiki ficou cerca de 40 vezes mais rápida, e o cliente web abre conversas e projeta a timeline muito mais rápido, com arquivos compactados (740 KB para 206 KB).
-  - **Conversas longas.** Retomar uma sessão com histórico grande envia só o que ela ainda não conhece sem reprocessar o resto (566 ms para 56 ms), e o servidor de orquestração libera as threads de chamadas concluídas.
+  - Remoção de pacotes grandes mais rápida. A limpeza do SQLite evita manter os grandes índices linha por linha quando todas as fontes pertencem ao pacote removido.
+  - Andamento da remoção visível. A tela informa cada etapa da limpeza e descarta o erro de importação anterior ao iniciar a remoção; outros pacotes e o cancelamento com rollback continuam protegidos.
 
-  ### Mais 13 correções e melhorias de desempenho.
+  ### Mais 1 correção e melhoria de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * perf(chat): replay only uncovered rows for reused history deltas
-  * perf(mcp): drop finished vr-ultra call threads between requests
-  * perf(storage): skip the response_modes replay when nothing needs repair
-  * perf(ui): keep terminal and timeline timers off the multimedia path
-  * perf(ui): defer bridge imports until after the loading frame
-  * perf(web): serve static assets with gzip negotiation
-  * perf(web): look up only the requested conversation in the web API
-  * perf(web): reuse one database connection per timeline projection
-  * perf(knowledge): reuse and batch document lookups in the wiki syncs
-  * perf(knowledge): project only rendered columns when publishing the INDEX
-  * perf(ui): check for messages instead of loading the conversation history
-  * perf(ui): resolve workspace metadata once per sidebar refresh
-  * perf(ui): read the computer name without WMI on the UI thread
+  * fix(code): optimize package removal and report cleanup stages
+  * chore(release): start 0.6.17
 
   </details>
