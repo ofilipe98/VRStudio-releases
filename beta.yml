@@ -1,26 +1,41 @@
-version: 0.6.17-beta.2
+version: 0.6.17-beta.3
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.17-beta.2/Keystone-Studio-0.6.17-beta.2-x64.exe
-    sha512: UmgKtT/Gf+zAHwNcN5Grwa86PjsQm096SCfnn3kZ0dKhZyPW1PaaQSwoI+hfCCWrLBNCsOLOVYa5LtpvHzUQww==
-    size: 601224588
-releaseDate: '2026-11-04T03:44:28Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.17-beta.3/Keystone-Studio-0.6.17-beta.3-x64.exe
+    sha512: NinRZCPi/37SO5417zcnk+TvBL152jhtKzGMGKuA6h8QZzgc7P9cJPrL6AKxcVMnscAA1JzSB1UVAaOM707Jog==
+    size: 601390409
+releaseDate: '2026-11-05T01:17:28Z'
 releaseNotes: |
-  **v0.6.17-beta.2** · 5 mudanças de 1 colaborador
+  **v0.6.17-beta.3** · 20 mudanças de 1 colaborador
 
-  - **Interface.** Drop success-only confirmation notices.
-  - **Interface.** Reduce the startup screen to the logo and name.
-  - **Interface.** Faster folder switches, new chats and startup warm-up.
-  - **Interface.** Keep the provider update badge clear of the toggle.
+  - **Visual mais confortável.** O tema escuro trocou o preto puro por um carvão suave, com texto branco atenuado e texto secundário mais legível. No claro, cartões brancos sobre fundo cinza e seleção visível na lista de conversas.
+  - **Chat mais limpo.** Composer mais compacto e estável ao expandir, atividade agrupada sob o resumo com um trilho, tabelas na largura da mensagem, blocos de código com a linguagem e cartões de duas linhas na lista de conversas.
+  - **Configurações reorganizadas.** Títulos e descrições com hierarquia consistente, ações de cabeçalho num único estilo, o editor de Provedores cresce com o conteúdo sem rolagem interna, e Aplicativos separa Catálogo e Pacotes VR em seções alinhadas.
+  - **Auditoria DB.** Os logs do PostgreSQL são recuperados pelo journal da máquina quando os arquivos de log não estão disponíveis, e um resultado truncado não é mais apresentado como completo.
 
-  ### Mais 1 correção e melhoria de desempenho.
+  ### Mais 7 correções e melhorias de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * fix(ui): keep the provider update badge clear of the toggle
-  * feat(ui): drop success-only confirmation notices
-  * perf(ui): faster folder switches, new chats and startup warm-up
-  * feat(ui): reduce the startup screen to the logo and name
-  * fix(providers): offer the pinned Antigravity runtime over a stale CLI copy
+  * docs(audit): trim trailing whitespace in the recovery log
+  * test(ui): stabilize beta gate scenarios
+  * fix(audit): handle wrapped queries and incomplete journal discovery
+  * perf(ui): reuse completed Markdown while answers stream
+  * fix(audit): recover PostgreSQL logs from the journal and stop false completeness
+  * perf(ui): reduce composer and Markdown processing overhead
+  * fix(ui): match T3 citation composer and comment editor
+  * test(ui): Chromium edit menu colours follow the round-4 muted token
+  * feat(ui): council round 8 — provider card grows with its editor, aligned Apps sections
+  * feat(ui): council round 7 — Apps headings, quiet header actions, steady composer type
+  * feat(ui): council round 6 — compact empty composer, grouped activity, two-line sidebar cards
+  * fix(ui): show thinking below pending context transfer
+  * fix(chat): make steering reliable across provider transports
+  * feat(ui): council round 5 — value hierarchy, consistent tray rules, unified selection style
+  * feat(ui): Apps page uses settings cards for packages, imports and processing
+  * feat(ui): council round 4 — clearer secondary text, explicit colour control, outlined scope pickers
+  * test(ui): Chromium edit menu follows the soft charcoal palette
+  * feat(ui): council round 3 — readable composer tray, wrapped landing chips, chevrons beside labels
+  * feat(ui): council round 2 — unified resting composer, narrow panels menu, stronger headings
+  * feat(ui): polish overhaul for eye comfort and visual hierarchy
 
   </details>
