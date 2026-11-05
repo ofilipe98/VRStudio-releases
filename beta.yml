@@ -1,38 +1,35 @@
-version: 0.6.17-beta.4
+version: 0.6.17-beta.5
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.17-beta.4/Keystone-Studio-0.6.17-beta.4-x64.exe
-    sha512: J5bXdjkW6fTthyKxnaF2xq+FniqrQuwT671vny/z1TYUxXe6d5UzH+LTCpHRIeo+81wQsnvw0+hzu1eAaWj56g==
-    size: 601417648
-releaseDate: '2026-11-05T18:42:24Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.17-beta.5/Keystone-Studio-0.6.17-beta.5-x64.exe
+    sha512: L5rFaEJwC/bSckXBCZzDOi+z6nI+Id3qHQ5Wk+Ibao9Py4SidiIG45rmTgGbezAMTLH1C13rRh17lClLaYzurA==
+    size: 601458549
+releaseDate: '2026-11-05T23:12:26Z'
 releaseNotes: |
-  **v0.6.17-beta.4** · 17 mudanças de 1 colaborador
+  **v0.6.17-beta.5** · 14 mudanças de 1 colaborador
 
-  - Chat com leitura mais calma: coluna de 680px alinhada ao composer, títulos e listas mais claros, tabelas que se ajustam ao conteúdo e blocos de código mais discretos.
-  - Composer único em repouso e expandido, com o seletor Agente VR, anexar e enviar na mesma linha.
-  - Tema escuro em tom grafite e card de contexto, barras de rolagem e botões da barra de título mais discretos.
-  - Correção: o Studio não fecha mais com erro depois de copiar um trecho do chat (o texto copiado é preservado).
+  - **Ferramentas sem engasgos.** Execuções com muitas saídas de ferramenta não travam mais a interface (587 atualizações: de 37,6 s para 0,18 s).
+  - **Fila por padrão.** Mensagens enviadas durante o turno entram na fila, com "Enviar agora" para mandá-las ao turno em andamento.
+  - **Markdown mais leve.** Respostas longas transmitem só os blocos alterados enquanto são escritas.
+  - **Sem congelar no índice.** O painel de aplicativos não varre mais a árvore decompilada a cada atualização.
 
-  ### Mais 3 correções e melhorias de desempenho.
+  ### Mais 10 correções e melhorias de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * fix(ui): stop leaving stale QRunnable wrappers from the pool warm-ups
-  * fix(ui): do not crash on exit after copying a chat selection
-  * feat(ui): reference round 14 — prose over code, one composer geometry, auto table columns
-  * feat(ui): reference round 13 — effective table padding, clean boundary, one idle composer height
-  * feat(ui): reference round 12 — clean composer boundary, ghost VR toggle, single source marker
-  * feat(ui): reference round 11 — reviewed reading design in the Chromium timeline, one composer footer
-  * feat(ui): reference round 10 — one composer tray spec, tighter turn gap, clean mask
-  * feat(ui): reference round 9 — scroll arrow outside the column, fill-only pills
-  * feat(ui): reference round 8 — denser Markdown, narrower card, fine scrollbars
-  * feat(ui): reference round 7 — edge scroll arrow, short placeholder, semibold heading ladder
-  * feat(ui): reference round 6 — quieter card and filter, overlay scrollbar, designed task boxes
-  * feat(ui): reference round 5 — one 680px column, charcoal ladder, one-surface composer
-  * feat(ui): reference round 4 — centered column, quieter card and composer tray
-  * feat(ui): reference round 3 — calmer reading column and settings edges
-  * fix(ui): provider status shares the title column
-  * feat(ui): reference round 2 — grouped sidebar, prose measure, quieter accents
-  * feat(ui): reference round 1 — task boxes, image tiles, quieter code blocks, readable prose
+  * feat(chat): guide native searches to narrow paths in VR and OFF prompts
+  * fix(ui): keep every assistant row field in the patch change signature
+  * perf(ui): send only changed Markdown blocks while streaming
+  * perf(providers): resolve update plans off the UI thread
+  * Revert "perf(ui): reuse attachment image data URLs across timeline publications"
+  * fix(code): take a capacity inventory when the display has no current one
+  * perf(ui): reuse attachment image data URLs across timeline publications
+  * perf(chat): stop re-reading the conversation on every tool delta
+  * perf(ui): cache attachment image projection across timeline publishes
+  * fix(ui): keep update notes popover open under the pointer and scrollable
+  * feat(chat): queue follow-ups by default during a running turn
+  * perf(code): stop walking the decompiled tree on every catalog refresh
+  * fix(opencode): report natively timed-out tool calls as failed
+  * docs: beta runtime incident analysis of 05/11/2026
 
   </details>
