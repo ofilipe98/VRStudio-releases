@@ -1,35 +1,17 @@
-version: 0.6.17-beta.5
+version: 0.6.17-beta.6
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.17-beta.5/Keystone-Studio-0.6.17-beta.5-x64.exe
-    sha512: L5rFaEJwC/bSckXBCZzDOi+z6nI+Id3qHQ5Wk+Ibao9Py4SidiIG45rmTgGbezAMTLH1C13rRh17lClLaYzurA==
-    size: 601458549
-releaseDate: '2026-11-05T23:12:26Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.17-beta.6/Keystone-Studio-0.6.17-beta.6-x64.exe
+    sha512: mqE+peDNGvKwhD5EIfTGWP/TbGPuu53sX/cokdSvfIRnWl5qLztCFlgQvXHGjUwp1C1o3BJE5kKBUn3aKcPaBw==
+    size: 600914363
+releaseDate: '2026-11-06T02:40:44Z'
 releaseNotes: |
-  **v0.6.17-beta.5** · 14 mudanças de 1 colaborador
+  **v0.6.17-beta.6** · 1 mudança de 1 colaborador
 
-  - **Ferramentas sem engasgos.** Execuções com muitas saídas de ferramenta não travam mais a interface (587 atualizações: de 37,6 s para 0,18 s).
-  - **Fila por padrão.** Mensagens enviadas durante o turno entram na fila, com "Enviar agora" para mandá-las ao turno em andamento.
-  - **Markdown mais leve.** Respostas longas transmitem só os blocos alterados enquanto são escritas.
-  - **Sem congelar no índice.** O painel de aplicativos não varre mais a árvore decompilada a cada atualização.
-
-  ### Mais 10 correções e melhorias de desempenho.
+  - **Código.** Externalize decompilation and import accelerated packages.
 
   <details>
   <summary>Registro completo</summary>
 
-  * feat(chat): guide native searches to narrow paths in VR and OFF prompts
-  * fix(ui): keep every assistant row field in the patch change signature
-  * perf(ui): send only changed Markdown blocks while streaming
-  * perf(providers): resolve update plans off the UI thread
-  * Revert "perf(ui): reuse attachment image data URLs across timeline publications"
-  * fix(code): take a capacity inventory when the display has no current one
-  * perf(ui): reuse attachment image data URLs across timeline publications
-  * perf(chat): stop re-reading the conversation on every tool delta
-  * perf(ui): cache attachment image projection across timeline publishes
-  * fix(ui): keep update notes popover open under the pointer and scrollable
-  * feat(chat): queue follow-ups by default during a running turn
-  * perf(code): stop walking the decompiled tree on every catalog refresh
-  * fix(opencode): report natively timed-out tool calls as failed
-  * docs: beta runtime incident analysis of 05/11/2026
+  * feat(code): externalize decompilation and import accelerated packages
 
   </details>
