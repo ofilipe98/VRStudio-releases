@@ -1,77 +1,96 @@
-version: 0.6.16
+version: 0.6.17
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.16/Keystone-Studio-0.6.16-x64.exe
-    sha512: psrvFMCd20wrYCt+ikl3vcmJiwjdBH35pQMWInVYpRmUIXZTKmkLLpI+xzaWojifMWAQuBKdlS+C1ljfhdv3cA==
-    size: 601144640
-releaseDate: '2026-11-03T23:45:29Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.17/Keystone-Studio-0.6.17-x64.exe
+    sha512: Lx3BAVhHY5f2MCvMXYZ10c53W2DwnXy/89ydWfT6+X47ojqnGzF6Zdyh5HDCRhgZybT20QbhFYhazwPld7EYSQ==
+    size: 600923206
+releaseDate: '2026-11-06T21:20:35Z'
 releaseNotes: |
-  **v0.6.16** · 56 mudanças de 1 colaborador
+  **v0.6.17** · 75 mudanças de 1 colaborador
 
-  - **Keystone Studio.** Pastas de dados, instalação, atalhos e notificações passam a usar o nome Keystone, com migração automática dos dados existentes, remoção da instalação antiga e atalhos fixados na barra de tarefas reapontados para o novo executável.
-  - **Importação de pacotes descompilados.** Importações portáteis ficam utilizáveis e recuperáveis, mais rápidas e sem travar a interface, com progresso real em 4 etapas (extração, análise e indexação, publicação e catálogo).
-  - **Abertura com tudo pronto.** A tela de carregamento só libera o Studio quando os índices de código e as conversas estão pré-carregados, o Studio não fica mais aberto depois de fechado e clicar no ícone da barra de tarefas minimiza e restaura a janela.
-  - **Mais rápido no dia a dia.** Sugestões de ortografia instantâneas, Configurações e lista de conversas várias vezes mais rápidas, cliente web mais leve e todas as cotas do Antigravity na aba Limites.
+  - **Código descompilado por pacote.** A descompilação saiu do Studio: o código vem do KeyStone JarDecomp como ZIP, importado mais rápido, com remoção de pacotes cancelável e confirmação antes de fechar durante uma importação.
+  - **Auditoria DB mais completa.** MCPs de todos os provedores como no chat comum, logs do PostgreSQL recuperados pelo journal sem falsa completude e auditorias agrupadas pelo cliente na lista lateral.
+  - **Chat mais fluido.** Interface revisada de ponta a ponta, timeline fluida durante ferramentas e Markdown, mensagens em andamento na fila por padrão e cópia de mensagens com imagens e anexos.
+  - **Perfis especialistas novos.** Especialista, Implantação, Suporte e Treinamento reescritos em torno do trabalho da equipe; avisos que só confirmam sucesso deixaram de aparecer.
 
-  ### Mais 48 correções e melhorias de desempenho.
+  ### Mais 33 correções e melhorias de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * perf(chat): replay only uncovered rows for reused history deltas
-  * perf(mcp): drop finished vr-ultra call threads between requests
-  * perf(storage): skip the response_modes replay when nothing needs repair
-  * perf(ui): keep terminal and timeline timers off the multimedia path
-  * perf(ui): defer bridge imports until after the loading frame
-  * perf(web): serve static assets with gzip negotiation
-  * perf(web): look up only the requested conversation in the web API
-  * perf(web): reuse one database connection per timeline projection
-  * perf(knowledge): reuse and batch document lookups in the wiki syncs
-  * perf(knowledge): project only rendered columns when publishing the INDEX
-  * perf(ui): check for messages instead of loading the conversation history
-  * perf(ui): resolve workspace metadata once per sidebar refresh
-  * perf(ui): read the computer name without WMI on the UI thread
-  * fix(installer): find the pin migration helper next to the script
-  * fix(ui): break the custom model editor implicit width loop
-  * fix(usage): show every Antigravity quota bucket in Limits
-  * feat(ui): animate the settings update check feedback
-  * fix(ui): show four honest import steps and always end the package task
-  * fix(code): report the portable import analysis phase while it runs
-  * fix(ui): restore taskbar minimize/restore and the window brand icon
-  * fix(installer): retarget legacy taskbar pins after the executable rename
-  * feat(ui): keep the startup screen until index and conversation caches are warm
-  * fix(ui): keep preloading conversations while the window is hidden
-  * test(providers): follow the OpenCode 2 catalog contract in the CLI probe
-  * fix(code): keep the identity repair inside the storage layer
-  * fix(ui): run release metadata reads on the startup-prepared pool
-  * perf(ui): decouple physical inventory from the frequent status
-  * perf(ui): read release metadata outside the UI thread
-  * perf(ui): memoize the VR package projection per revision
-  * perf(ui): consolidate the applications selection updates
-  * perf(ui): notify applications progress without rebuilding catalog state
-  * perf(code): reuse parsed sources of duplicate JARs during portable imports
-  * fix(code): keep source identity in index transfers and repair collapsed rows
-  * perf(code): stage portable import files before the writer transaction
-  * perf(code): keep processing readers out of the schema writer lock
-  * perf(code): index the per-file progress probe
-  * perf(ui): make composer spelling suggestions immediate
-  * fix(ui): lighten the focused row of the timeline edit menu
-  * feat(ui): add the T3 text editing menu to the timeline
-  * fix(storage): never hide legacy data or touch a coexisting old install
-  * fix(storage): keep diagnostics out of the real preference store
-  * fix(storage): clean empty legacy Qt cache roots
-  * fix(updates): relaunch the new Studio after a legacy silent update
-  * docs: document the Keystone storage migration
-  * feat(installer): rename installation artifacts and remove legacy installs
-  * feat(storage): migrate persistent identifiers to Keystone
-  * fix(ui): restore a minimized maximized window without a size jump
-  * fix(ui): keep the window maximized after restoring from minimize
-  * fix(providers): keep OpenCode models in the composer catalog
-  * fix(ui): confirm timeline copy actions with a check and tooltip
-  * fix(ui): show the project monogram on archived folders
-  * fix(ui): render the composer in the Markdown face
-  * fix(ui): never create native threads on the GUI thread when reaching the chat
-  * fix(code): make portable decompiled package imports usable and recoverable
-  * fix(ui): stop waiting forever for preserved workers after the window closes
-  * chore(release): start 0.6.16
+  * feat(profiles): widen the expert profiles around the team's work
+  * feat(audit): use every provider's MCPs in audits as in regular chats
+  * fix(ui): keep file URLs out of the composer text on paste
+  * feat(ui): copy a message with its attachments
+  * fix(handoff): bind provisional native ids to the real session
+  * fix(audit): supersede pending delivery when the session is discarded
+  * fix(audit): release every native session a conversation has had
+  * feat(ui): confirm before closing during a decompiled import
+  * feat(ui): group audits under their client in the sidebar
+  * fix(audit): disable OpenCode's own MCPs instead of failing the audit
+  * perf(ui): keep the timeline fluid while tools stream
+  * test(ui): start the slow status reader only after the previous one settles
+  * test(ui): drive the Claude accent picker only after the editor shows Claude
+  * fix(code): let removals cancel the slow index inventory
+  * perf(updates): inventory known databases and prune backups after the update
+  * fix(ui): ignore window state callbacks after the window is destroyed
+  * feat(code): externalize decompilation and import accelerated packages
+  * feat(chat): guide native searches to narrow paths in VR and OFF prompts
+  * fix(ui): keep every assistant row field in the patch change signature
+  * perf(ui): send only changed Markdown blocks while streaming
+  * perf(providers): resolve update plans off the UI thread
+  * Revert "perf(ui): reuse attachment image data URLs across timeline publications"
+  * fix(code): take a capacity inventory when the display has no current one
+  * perf(ui): reuse attachment image data URLs across timeline publications
+  * perf(chat): stop re-reading the conversation on every tool delta
+  * perf(ui): cache attachment image projection across timeline publishes
+  * fix(ui): keep update notes popover open under the pointer and scrollable
+  * feat(chat): queue follow-ups by default during a running turn
+  * perf(code): stop walking the decompiled tree on every catalog refresh
+  * fix(opencode): report natively timed-out tool calls as failed
+  * docs: beta runtime incident analysis of 05/11/2026
+  * fix(ui): stop leaving stale QRunnable wrappers from the pool warm-ups
+  * fix(ui): do not crash on exit after copying a chat selection
+  * feat(ui): reference round 14 — prose over code, one composer geometry, auto table columns
+  * feat(ui): reference round 13 — effective table padding, clean boundary, one idle composer height
+  * feat(ui): reference round 12 — clean composer boundary, ghost VR toggle, single source marker
+  * feat(ui): reference round 11 — reviewed reading design in the Chromium timeline, one composer footer
+  * feat(ui): reference round 10 — one composer tray spec, tighter turn gap, clean mask
+  * feat(ui): reference round 9 — scroll arrow outside the column, fill-only pills
+  * feat(ui): reference round 8 — denser Markdown, narrower card, fine scrollbars
+  * feat(ui): reference round 7 — edge scroll arrow, short placeholder, semibold heading ladder
+  * feat(ui): reference round 6 — quieter card and filter, overlay scrollbar, designed task boxes
+  * feat(ui): reference round 5 — one 680px column, charcoal ladder, one-surface composer
+  * feat(ui): reference round 4 — centered column, quieter card and composer tray
+  * feat(ui): reference round 3 — calmer reading column and settings edges
+  * fix(ui): provider status shares the title column
+  * feat(ui): reference round 2 — grouped sidebar, prose measure, quieter accents
+  * feat(ui): reference round 1 — task boxes, image tiles, quieter code blocks, readable prose
+  * docs(audit): trim trailing whitespace in the recovery log
+  * test(ui): stabilize beta gate scenarios
+  * fix(audit): handle wrapped queries and incomplete journal discovery
+  * perf(ui): reuse completed Markdown while answers stream
+  * fix(audit): recover PostgreSQL logs from the journal and stop false completeness
+  * perf(ui): reduce composer and Markdown processing overhead
+  * fix(ui): match T3 citation composer and comment editor
+  * test(ui): Chromium edit menu colours follow the round-4 muted token
+  * feat(ui): council round 8 — provider card grows with its editor, aligned Apps sections
+  * feat(ui): council round 7 — Apps headings, quiet header actions, steady composer type
+  * feat(ui): council round 6 — compact empty composer, grouped activity, two-line sidebar cards
+  * fix(ui): show thinking below pending context transfer
+  * fix(chat): make steering reliable across provider transports
+  * feat(ui): council round 5 — value hierarchy, consistent tray rules, unified selection style
+  * feat(ui): Apps page uses settings cards for packages, imports and processing
+  * feat(ui): council round 4 — clearer secondary text, explicit colour control, outlined scope pickers
+  * test(ui): Chromium edit menu follows the soft charcoal palette
+  * feat(ui): council round 3 — readable composer tray, wrapped landing chips, chevrons beside labels
+  * feat(ui): council round 2 — unified resting composer, narrow panels menu, stronger headings
+  * feat(ui): polish overhaul for eye comfort and visual hierarchy
+  * fix(ui): keep the provider update badge clear of the toggle
+  * feat(ui): drop success-only confirmation notices
+  * perf(ui): faster folder switches, new chats and startup warm-up
+  * feat(ui): reduce the startup screen to the logo and name
+  * fix(providers): offer the pinned Antigravity runtime over a stale CLI copy
+  * fix(code): optimize package removal and report cleanup stages
+  * chore(release): start 0.6.17
 
   </details>
