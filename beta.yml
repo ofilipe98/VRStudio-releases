@@ -1,21 +1,19 @@
-version: 0.6.17-beta.8
+version: 0.6.17-beta.9
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.17-beta.8/Keystone-Studio-0.6.17-beta.8-x64.exe
-    sha512: uBodMQ9fSNyhTzh3blHfJ/8h4XiXgdTlBHvrw1xBp57QmhgBRDbqfydzH5JcqXkvM83Dsn+9l1g8Gw9Pbj1Urg==
-    size: 600928697
-releaseDate: '2026-11-06T04:46:22Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.17-beta.9/Keystone-Studio-0.6.17-beta.9-x64.exe
+    sha512: /ZEQaOoufOmuhIGrMsudHg8QzkzFtFYcOtpHjkK8/vJqn2pUx3oBr4Sh6G+Cl+56nZF7Uh7QcMyMwgiECVvMeA==
+    size: 600942494
+releaseDate: '2026-11-06T14:16:54Z'
 releaseNotes: |
-  **v0.6.17-beta.8** · 4 mudanças de 1 colaborador
+  **v0.6.17-beta.9** · 1 mudança de 1 colaborador
 
-  - **Atualizações.** Inventory known databases and prune backups after the update.
-  - **Código.** Let removals cancel the slow index inventory.
+  - **Interface.** O chat continua fluido enquanto o modelo usa muitas ferramentas: a tela não trava mais e a rolagem pela atividade não engasga, inclusive na Auditoria DB.
+
+  ### Mais 1 correção e melhoria de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * test(ui): start the slow status reader only after the previous one settles
-  * test(ui): drive the Claude accent picker only after the editor shows Claude
-  * fix(code): let removals cancel the slow index inventory
-  * perf(updates): inventory known databases and prune backups after the update
+  * perf(ui): keep the timeline fluid while tools stream
 
   </details>
