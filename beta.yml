@@ -1,19 +1,21 @@
-version: 0.6.17-beta.9
+version: 0.6.17-beta.10
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.17-beta.9/Keystone-Studio-0.6.17-beta.9-x64.exe
-    sha512: /ZEQaOoufOmuhIGrMsudHg8QzkzFtFYcOtpHjkK8/vJqn2pUx3oBr4Sh6G+Cl+56nZF7Uh7QcMyMwgiECVvMeA==
-    size: 600942494
-releaseDate: '2026-11-06T14:16:54Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.17-beta.10/Keystone-Studio-0.6.17-beta.10-x64.exe
+    sha512: LspNWVoYI4rNiZPAIqE+Yp8LfzlqdeukKSrNMbnYaZg0oIjyZaDlmdKRNU4XEzQ5TlpW+OQQiQosFg5fi7dYMg==
+    size: 600973198
+releaseDate: '2026-11-06T17:09:49Z'
 releaseNotes: |
-  **v0.6.17-beta.9** · 1 mudança de 1 colaborador
+  **v0.6.17-beta.10** · 3 mudanças de 1 colaborador
 
-  - **Interface.** O chat continua fluido enquanto o modelo usa muitas ferramentas: a tela não trava mais e a rolagem pela atividade não engasga, inclusive na Auditoria DB.
-
-  ### Mais 1 correção e melhoria de desempenho.
+  - **Interface.** Confirm before closing during a decompiled import.
+  - **Interface.** Group audits under their client in the sidebar.
+  - **Auditoria DB.** Disable OpenCode's own MCPs instead of failing the audit.
 
   <details>
   <summary>Registro completo</summary>
 
-  * perf(ui): keep the timeline fluid while tools stream
+  * feat(ui): confirm before closing during a decompiled import
+  * feat(ui): group audits under their client in the sidebar
+  * fix(audit): disable OpenCode's own MCPs instead of failing the audit
 
   </details>
