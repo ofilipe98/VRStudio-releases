@@ -1,19 +1,17 @@
-version: 0.6.18-beta.2
+version: 0.6.18-beta.3
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.18-beta.2/Keystone-Studio-0.6.18-beta.2-x64.exe
-    sha512: J5XTuEY+GuGmRbN27U9Yz5L89obbUlpwl2ZBHtrpo3CaQAoXu6Tlum2+nq15VnTX4N/QQc8jPSPQ36Yc/le7jA==
-    size: 600986887
-releaseDate: '2026-11-06T23:20:55Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.18-beta.3/Keystone-Studio-0.6.18-beta.3-x64.exe
+    sha512: sezQWH6k9tdWbMcKlp4c0DHXxYW9TlYoktGBCWwURxVH3Mxee2+ldvVfSq9Ufn9k0N85VOeQgixCXbaLis4oxw==
+    size: 600985667
+releaseDate: '2026-11-07T00:57:03Z'
 releaseNotes: |
-  **v0.6.18-beta.2** · 2 mudanças de 1 colaborador
+  **v0.6.18-beta.3** · 1 mudança de 1 colaborador
 
-  - **Atualizações.** Keep two update backups and prune before copying.
-  - **Atualizações.** Refuse an update that does not fit on the disk.
+  - **Auditoria DB.** Preserve sessions across schema and source misses.
 
   <details>
   <summary>Registro completo</summary>
 
-  * fix(updates): keep two update backups and prune before copying
-  * fix(updates): refuse an update that does not fit on the disk
+  * fix(audit): preserve sessions across schema and source misses
 
   </details>
