@@ -1,117 +1,31 @@
-version: 0.6.19-beta.1
+version: 0.6.19-beta.2
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.19-beta.1/Keystone-Studio-0.6.19-beta.1-x64.exe
-    sha512: x4tzvoT42UqYsroyUFFpaPA/SdqMsRQeJmC9xAjnZ5OJ/TwroM2bWnPFRMgQnA5s5MV+vk6PG+6dTopMg5i/Pw==
-    size: 604082763
-releaseDate: '2026-11-09T10:37:34Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.19-beta.2/Keystone-Studio-0.6.19-beta.2-x64.exe
+    sha512: ETqeG2qy8L2btOkrbjxg1XS3Ss2vccuKvMlx2kyjZfB71XWuzz82h9lFfuUPCNZSylMf9E3vrCpuzFsS2FSnMg==
+    size: 604274703
+releaseDate: '2026-11-10T01:50:57Z'
 releaseNotes: |
-  **v0.6.19-beta.1** · 96 mudanças de 1 colaborador
+  **v0.6.19-beta.2** · 10 mudanças de 1 colaborador
 
-  - **Interface Web.** Enforce Tailscale-only remote access and environment probe.
-  - **Remote.** Add Tailscale-only remote Studio computers.
-  - **Settings.** Retire the dependencies screen.
-  - **Terminal.** Declare pywinpty and ship ConPTY in the release build.
+  - **Remote.** SSH computers (T3 parity) and environment docs.
+  - **Sidebar.** A dragged conversation follows the pointer as a pill.
+  - **Composer.** Attach images while the agent is thinking (t3 parity).
+  - **Remote.** Implementation audit round (N1-N32).
 
-  ### Mais 63 correções e melhorias de desempenho.
+  ### Mais 3 correções e melhorias de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * fix(remote,code,context): audit round 10 follow-ups
-  * fix(remote,context): audit round 9 of the Tailscale access and snoozes
-  * fix(code): an atomic write waits out a transient Windows sharing violation
-  * fix(context): reference refresh keeps snoozes, batches reads, loads once
-  * fix(context): a reference refresh never resets the open page selection
-  * fix(remote): the real probe works; Tailscale-only access hardened
-  * fix(remote): product name in remote-computer copy comes from core.brand
-  * fix(context): reference changes reach the sidebar, children, loads and the web
-  * fix(providers): a running update stays visible to its starter; stale announcements clear
-  * feat(web): enforce Tailscale-only remote access and environment probe
-  * feat(remote): add Tailscale-only remote Studio computers
-  * test(timeline): the startup-draft preload check targets the opened conversation
-  * feat(settings): retire the dependencies screen
-  * fix(providers): update status scoped to its executable; installs wait for updates
-  * fix(context): rename, archive, trash and delete refresh every view of the target
-  * fix(context): inline code spans never cross a line break
-  * fix(composer): one pass for selection chips; links in code fences stay literal
-  * fix(context): every rename retires stale titles in cached timelines
-  * fix: one updater per executable across server binds; fork replay keeps its point
-  * fix(web): pasted foreign chips paint as unavailable; valid spell-check lang
-  * fix(context): revealed children on the web, recordless stored chips, rename while running
-  * fix: fork recovery keeps its cut; a server-bound starter keeps its state
-  * fix(composer): a selection deletes only itself; forward delete takes the right chip
-  * refactor(providers): extract the post-update runtime write
-  * fix(providers): the update starter always tracks its new runtime
-  * fix(web): resilient thread links, honest pasted chips, shelf token removal
-  * fix(composer): atomic chips for word delete, selection and undo
-  * fix(context): one read scope and one row read per projection pass
-  * fix(providers): isolate external OpenCode servers from local CLI updates
-  * fix(chat): complete fork recovery and compact legacy ultra sessions
-  * fix(timeline): keep the replay projection free of per-message reads
-  * docs(web): state the T3 attachment limits the client and server now share
-  * fix(chat): inline chips open, delete and render atomically
-  * fix(providers): settle stale account and shared update state
-  * fix(web): align inline context chips and attachments with the server
-  * fix(chat): honor lineage in thread chips and keep web attachment names
-  * fix(chat): thread list and search resolve ancestors from the loaded rows
-  * fix(chat): fork recovery replays the post-create setup
-  * fix(chat): the idle compaction re-reads the current native session
-  * fix(providers): a v1 external Stop aborts the pending prompt
-  * test(chat): the attachment reader fake takes the display names
-  * fix(integration): keep attached names and the cached reset
-  * fix(integration): one reset-visibility rule; chips follow external OpenCode
-  * fix(chat): repair inline context chips and composer attachment state
-  * fix(orchestration): harden thread queue, transfer and idle compaction
-  * Fix inline context reference scope, projection and web attachment limits
-  * fix(providers): keep validated state and reload changed catalogs
-  * fix(providers): keep stored credentials on reset and harden external OpenCode turns
-  * feat(terminal): declare pywinpty and ship ConPTY in the release build
-  * fix(integration): thread chips follow the read scope; guard chip refresh
-  * fix(integration): align mentions, links and composer keys after the merge
-  * fix(integration): reconcile inline context chips with the batch
-  * fix(ui): remove the blank gap after inline context chips
-  * test(ui): compare timeline scroll on the device-pixel grid
-  * fix(integration): fork no longer copies the removed version comparison
-  * fix(provider): report deleted attachments as unavailable
-  * fix(timeline): fade unavailable context chips
-  * feat(web): copy a conversation reference from the sidebar
-  * test(composer): cover UTF-16 chip offsets with astral text
-  * fix(composer): keep large pastes out of the editor layout
-  * fix(integration): reconcile the provider batch with the full gate
-  * fix(context): stabilize queued attachments and web thread mentions
-  * fix(context): keep live titles, edit records and code fences intact
-  * docs: describe the inline context reference contract
-  * feat(web): inline context chips in the composer and timeline
-  * feat(composer): atomic inline context chips
-  * feat(timeline): render inline context chips at their positions
-  * feat(chat): add canonical inline context references
-  * fix(threads): harden search isolation, fork recovery and title refresh
-  * feat(threads): include the child link in delegated task results
-  * fix(threads): cap rename and interrupt to the caller profile
-  * docs(agents): document the t3 thread communication contract
-  * fix(threads): make merge_back replay idempotent
-  * feat(ui): show who sent a message and open the sender
-  * fix(ui): polish integrated batch details
-  * fix(updates): back up only the essential databases
-  * feat(threads): fork a stable run and merge the delta back
-  * feat(providers): keep refused values inline and add plain environment variables
-  * feat(threads): search conversations and manage the queue
-  * feat(threads): read any conversation and persist sender provenance
-  * feat(chat): select multiple VR packages and retire version comparison
-  * feat(providers): add Antigravity sign-in methods and ACP settings
-  * fix(providers): port T3 update-all, compatibility and maintenance checks
-  * fix(ui): keep the chat column in place when the details card opens
-  * feat(providers): connect OpenCode to an external server
-  * fix(providers): align model labels, states and custom editor with t3
-  * feat(providers): sign in to ChatGPT from a Codex instance
-  * feat(settings): move schema indexing into applications and clean up syncs
-  * feat(providers): scroll the provider card like t3 with diagnostic states
-  * feat(providers): compact idle threads
-  * fix(providers): align the add-provider wizard with t3
-  * fix(chat): show text attachments on sent messages
-  * fix(ui): show projectless conversations as Sem projeto
-  * WIP: OpenCode external server connection (unfinished delegate, review critically)
-  * fix(audit): request typed SQL errors from the Monitor
-  * chore(release): start 0.6.19
+  * test(context): wait for the history reload before checking the self chip
+  * test(ssh): the PAIR channel fixture counts its temp as this account's
+  * fix(composer): attach images while the agent is thinking (t3 parity)
+  * fix(remote): implementation audit round (N1-N32)
+  * test: the Tailscale guard answers 'not installed' and stays last in probe_guards
+  * feat(remote): SSH computers (T3 parity) and environment docs
+  * fix(remote): client-side audit findings, node-pinned identity and LAN routes
+  * fix(remote): host-side audit findings and LAN access (T3 parity)
+  * fix(context): a conversation dropped on a new chat becomes a chip
+  * feat(sidebar): a dragged conversation follows the pointer as a pill
 
   </details>
