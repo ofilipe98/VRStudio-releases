@@ -1,35 +1,21 @@
-version: 0.6.19-beta.3
+version: 0.6.19-beta.4
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.19-beta.3/Keystone-Studio-0.6.19-beta.3-x64.exe
-    sha512: podqYggzTl5MOXOe1wHiPABXiY8TygYIXiVyX+O3MDO92S78vUzMFSds8YTJymsMLxM8ui9ovNuvvdLRnrgc1Q==
-    size: 604446372
-releaseDate: '2026-11-10T18:59:51Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.19-beta.4/Keystone-Studio-0.6.19-beta.4-x64.exe
+    sha512: 3I+492RyLZ/FQdV0r3oihaaGFt/mfFPKIcC5q/qnFbhZ0GsCjZtBIYMsMSmHqFiHyyUCvg8ltd4n+HN6obrLrQ==
+    size: 604466893
+releaseDate: '2026-11-10T20:39:30Z'
 releaseNotes: |
-  **v0.6.19-beta.3** · 14 mudanças de 1 colaborador
+  **v0.6.19-beta.4** · 3 mudanças de 1 colaborador
 
-  - **Interface Web.** Global approvals, queue reorder, media viewer and chat parity.
-  - **Interface Web.** Add file references, tree search, terminal sessions and agent controls.
-  - **Interface Web.** Attach files and recall prompts during a turn.
-  - **Interface Web.** Browser surface on demand, layout and HTML artifact replay.
-
-  ### Mais 7 correções e melhorias de desempenho.
+  - **Chat.** Request_secret card on the desktop, as on the web.
+  - **Timeline.** Cover the black frame of the first timeline show.
+  - **Archive.** Audits are grouped and named by client, as in the sidebar.
 
   <details>
   <summary>Registro completo</summary>
 
-  * fix(providers): the model slug width follows the row, not its own layout
-  * fix(startup): a normal start opens once at the full window size
-  * fix(claude): Fable 5.2, legacy generations and usage limits that did not arrive
-  * fix(startup): start the preload pools on a Qt thread, not a Python worker
-  * fix(web): take the product name from the brand profile in new texts
-  * fix(web): connect the browser surface request to the browser bridge
-  * feat(web): global approvals, queue reorder, media viewer and chat parity
-  * feat(web): add file references, tree search, terminal sessions and agent controls
-  * fix(web): scope the startup work summary to visible conversations
-  * feat(web): attach files and recall prompts during a turn
-  * feat(web): browser surface on demand, layout and HTML artifact replay
-  * feat(web): restore global sidebar and page parity
-  * feat(web): provider accounts, maintenance and model groups in settings
-  * feat(profiles): focus the Especialista profile on database, schema and code analysis
+  * fix(chat): request_secret card on the desktop, as on the web
+  * fix(timeline): cover the black frame of the first timeline show
+  * fix(archive): audits are grouped and named by client, as in the sidebar
 
   </details>
