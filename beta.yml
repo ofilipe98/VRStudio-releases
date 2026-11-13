@@ -1,21 +1,49 @@
-version: 0.6.19-beta.4
+version: 0.6.19-beta.5
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.19-beta.4/Keystone-Studio-0.6.19-beta.4-x64.exe
-    sha512: 3I+492RyLZ/FQdV0r3oihaaGFt/mfFPKIcC5q/qnFbhZ0GsCjZtBIYMsMSmHqFiHyyUCvg8ltd4n+HN6obrLrQ==
-    size: 604466893
-releaseDate: '2026-11-10T20:39:30Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.19-beta.5/Keystone-Studio-0.6.19-beta.5-x64.exe
+    sha512: 1A9p3kuJnRYPTNZVyyF7TnGFMPdcd1VqMCTdJ9o57WXBPErxSd+2MnvYiXxZVM/hc8AG6oxzyMsj9Cxb0W93Qw==
+    size: 604619749
+releaseDate: '2026-11-13T01:48:42Z'
 releaseNotes: |
-  **v0.6.19-beta.4** · 3 mudanças de 1 colaborador
+  **v0.6.19-beta.5** · 28 mudanças de 1 colaborador
 
-  - **Chat.** Request_secret card on the desktop, as on the web.
-  - **Timeline.** Cover the black frame of the first timeline show.
-  - **Archive.** Audits are grouped and named by client, as in the sidebar.
+  - Interface mais confortável: espaçamento e alinhamento do chat, composer e configurações refinados, com cores de destaque, status e sintaxe preservadas.
+  - Cartões de conversa com projeto e provedor, detalhes flutuantes e automações vinculadas; perguntas de texto livre podem ser respondidas pelo composer com Enter.
+  - Títulos escritos por modelo após a primeira mensagem e ao gerar novamente, inclusive em auditorias. Modelo, esforço e instruções configuráveis em Geral; o automático usa o modelo mais utilizado no menor esforço disponível.
+  - VR Code escuro com superfícies pretas; temas Bosque, Oceano, Brasa e Íris em português. O tema Padrão mantém as superfícies em carvão.
+
+  ### Mais 5 correções e melhorias de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * fix(chat): request_secret card on the desktop, as on the web
-  * fix(timeline): cover the black frame of the first timeline show
-  * fix(archive): audits are grouped and named by client, as in the sidebar
+  * fix(tests): retain Qt ownership cleanup for imported wrapped fixtures
+  * fix(ui): text generation settings read the driver list once, outside the model binding
+  * feat: automatic text generation model is the most used one; audits get model titles
+  * feat: model-written thread titles, Antigravity runtime row, black VR Code dark
+  * fix(ui): top edge fade no longer shades the first message
+  * fix: web composer paints Markdown and spelling again; safe context record bytes
+  * feat(ui): t3 conversation cards, details automations and question answers by Enter
+  * feat(ui): colour rounds 39–42 — accent, status and syntax colour restored
+  * feat(ui): reference rounds 36–38 — council at 10/10 in every category
+  * feat(ui): reference round 35 — council at 9.5 in every category
+  * feat(ui): reference round 34 — first message closer under the title bar, scroll-thumb hierarchy
+  * feat(ui): reference round 33 — 13px inline code, trailing in-card chevrons, more footer air
+  * feat(ui): reference round 32 — editor scrollbar on its edge, ~26px after code cards, 13px code
+  * feat(ui): reference rounds 30–31 — whole-row settings sections, list lead-ins on cadence, neutral quotes
+  * feat(ui): reference rounds 28–29 — clean settings edges, one placeholder ink, quieter narrow composer
+  * feat(ui): reference rounds 26–27 — whole-row settings edges, even composer tray, steady brand row
+  * feat(ui): reference round 25 — whole action row, rounded edge cards, calmer code
+  * feat(ui): reference round 24 — whole-line chat edges, overlay scrollbars, labelled credentials
+  * feat(ui): reference round 23 — hard composer edge, quieter composer row, tighter Markdown
+  * feat(ui): reference round 22 — scroll disc beside the composer, one accent, one-line provider status
+  * feat(ui): reference round 21 — short edge fades, flush answer actions, value cue on switches
+  * fix(ui): keep custom effort labels, translate only the stock ones
+  * feat(ui): reference round 20 — centered column, shorter composer, kept line breaks
+  * feat(ui): reference round 19 — scroll disc on clear canvas, lighter composer, filled image tile
+  * feat(ui): reference round 18 — neutral switches, clear scroll disc, firmer utilities
+  * feat(ui): reference round 17 — soft composer band, quiet margin note, flat theme swatches
+  * feat(ui): reference round 16 — readable answer end, code at its set size, quieter chrome
+  * feat(ui): reference round 15 — margin-note context, prose over code, white light canvas
 
   </details>
