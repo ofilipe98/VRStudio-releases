@@ -1,30 +1,29 @@
-version: 0.6.19-beta.6
+version: 0.6.19-beta.7
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.19-beta.6/Keystone-Studio-0.6.19-beta.6-x64.exe
-    sha512: ydboabUEKjQBl3POc1K2uvgIxgP1fXEqofVstb1tHngbRBA/p5g+hA2LqYKq7lvBcw4iRDEjkVl3M70EqnbQKA==
-    size: 604638675
-releaseDate: '2026-11-13T15:35:40Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.19-beta.7/Keystone-Studio-0.6.19-beta.7-x64.exe
+    sha512: MSPwMvwrnhMeA0wNweAruRRHceNDKdxRsdWQTo6PXSjpMywpyku/0tA5LEe5nhnZoryiRgdReDwwwb/fHW9tJw==
+    size: 604835405
+releaseDate: '2026-11-13T18:49:44Z'
 releaseNotes: |
-  **v0.6.19-beta.6** · 9 mudanças de 1 colaborador
+  **v0.6.19-beta.7** · 8 mudanças de 1 colaborador
 
-  - Temas com os orbs do T3 Code em Aparência: cada tema mostra as variantes clara e escura com as cores de destaque e de ação.
-  - Codex: "Enviar agora" volta a funcionar depois de reabrir o Studio, e o primeiro turno de uma conversa retomada não fica mais preso em execução.
-  - OpenCode: "Aprovar nesta sessão" passa a valer de fato, e a Auditoria DB respeita a opção restritiva agent=plan.
-  - Agendamentos: o agente vê se pode criar tarefas e indica onde ligar "Tarefas do agente" quando a opção está desligada.
+  - Atualizações: passe o mouse no botão de atualização para ver as novidades de todas as versões puladas, com barra de rolagem como no T3; uma versão nova abre um aviso com os destaques e "Baixar atualização".
+  - Fila de mensagens: uma falha ao iniciar não apaga mais a fila, "Enviar agora" funciona numa mensagem pausada e um limite de uso ativo segura a fila até renovar.
+  - Composer: colagem grande vira um chip pasted-text.txt no cursor, imagens acima de 10 MB são comprimidas e a seta para cima não traz mais "Continue de onde parou.".
+  - Agente: leitura de conversas no orçamento do T3 (sem respostas gigantes), thread_launch sem exigir Acesso total, browser que reaproveita a aba e não grava a aba que você controla.
 
-  ### Mais 7 correções e melhorias de desempenho.
+  ### Mais 6 correções e melhorias de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * feat(ui): theme previews are T3 Code orbs
-  * fix(opencode): audit refusal reasons take the product name from core.brand
-  * fix: agents see the real schedule permission; OpenCode audit refusals name the cause
-  * fix(opencode): session approvals take effect; agent=plan restricts audits
-  * fix(updates): keep the product name out of the helper template comment
-  * fix(codex): a resumed thread's token usage no longer hijacks the new turn
-  * fix(updates): reopen the Studio when the old process outlives the helper wait
-  * docs: keep validation files inside .test-tmp; decompilation extraction plan
-  * fix: whole-codebase bug audit (desktop, web, providers, orchestrator, storage)
+  * fix(updates): the update popup uses the theme's brand accent
+  * docs: record the t3 nightly parity fixes of 13/11
+  * feat(updates): t3 release notes popover and an "update available" popup
+  * fix(composer): paste, recall, titles, attachments and zoom follow t3 nightly
+  * fix(providers): update advice, defaults and Claude skills follow t3 nightly
+  * fix(browser,web): browser tools and web access follow t3 nightly
+  * fix(queue,schedules): turn queue, resume and schedules follow t3 nightly
+  * fix(orchestrator): thread tools follow t3 nightly budgets and replies
 
   </details>
