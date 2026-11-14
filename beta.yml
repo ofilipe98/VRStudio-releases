@@ -1,31 +1,39 @@
-version: 0.6.19-beta.8
+version: 0.6.20-beta.1
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.19-beta.8/Keystone-Studio-0.6.19-beta.8-x64.exe
-    sha512: X4Fp44WIRvR+AqYv9ajZ5y1+Lk5IpkGnC1Fn++DxSjcU39MYuF8zGm4ILt42iULKOJSl1fn2+TyUHoGxzN3qGQ==
-    size: 605256887
-releaseDate: '2026-11-14T00:45:59Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.1/Keystone-Studio-0.6.20-beta.1-x64.exe
+    sha512: 6JeeS7+XyVc5Cbd7fnqtt3P+Qo07p5F3jIu2igz1F485GdLLdgktn5NjxREvPADMPWj5kztfIC+Y+q8bSfWoDA==
+    size: 605598277
+releaseDate: '2026-11-14T11:48:01Z'
 releaseNotes: |
-  **v0.6.19-beta.8** · 10 mudanças de 1 colaborador
+  **v0.6.20-beta.1** · 18 mudanças de 1 colaborador
 
-  - Auditoria DB Monitor: com a aprovação de host, o agente navega diretórios, procura arquivos por nome, resolve links, lê arquivos inteiros em blocos e percorre o journal por intervalo, tudo somente leitura pelo VRMonitor.
-  - As leituras do host viram coletas que continuam entre turnos e depois de reabrir o Studio, com a evidência salva na pasta da conversa e sem bytes duplicados.
-  - Se o Monitor ainda não tiver a nova rota de arquivos, a auditoria avisa que ele precisa ser atualizado, sem alternativa por shell.
-  - Barra lateral: os cartões de conversa e o filtro de projetos voltam a seguir o T3 Code.
+  - Interface web: o cliente no navegador agora tem a mesma aparência do Studio — barra lateral, cabeçalho, conversa, composer e tela de nova conversa iguais ao desktop.
+  - Configurações na web: as 13 categorias do desktop, no mesmo layout, incluindo Provedores, Aplicativos e Versões, Wiki e KB, Auditoria DB, Tarefas agendadas e Conexões com computadores remotos.
+  - Uso e Logs abrem como páginas ao lado da barra lateral; o navegador de código segue a origem do aplicativo selecionada.
+  - Correções na web: conexões recusadas pelo servidor no Windows, fontes de conhecimento que não carregavam em Wiki e KB e erro ao abrir a lista de versões de um aplicativo.
 
-  ### Mais 2 correções e melhorias de desempenho.
+  ### Mais 6 correções e melhorias de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * fix(audit): break the host files import cycle and keep brand literals central
-  * docs(audit): native host files and journal through the Monitor
-  * feat(audit): read host files by block and by seek
-  * feat(audit): implement host directory list, file find and journal executor
-  * test(audit): host file tools keep native and MCP parity and isolation
-  * feat(audit): host files executor plumbing, open and resolve
-  * feat(audit): add native Monitor files transport and contract
-  * feat(audit): define host file tool specs, presentation, and audit guide
-  * feat(audit): persist host collection state and local artifacts
-  * fix(sidebar): conversation cards and project filter follow t3 again
+  * fix(web): Wiki e KB loads its knowledge sources when the page opens
+  * feat(web): settings, pages and chat follow the desktop 1:1
+  * fix(audit): accept the Monitor's Go serialization of host file results
+  * fix(web): restore the Antigravity provider mark and the W6 stylesheet path
+  * WIP(w4): taken over by the lead
+  * WIP(w6): taken over by the lead
+  * WIP(w5): taken over by the lead
+  * WIP(w1r2): taken over by the lead
+  * web(w1): round 2 settings parity - metric-driven primitives, host folder browser, Sobre/Atualizacoes copy and working controls
+  * feat(web): port the conversation sidebar and chat header 1:1
+  * fix(audit): retry transient OpenCode 2 API errors and report why the audit facade is unconfirmed
+  * feat(web): render the chat timeline 1:1 with the desktop document
+  * WIP(w1): round 2 partial (Gemini quota)
+  * WIP(w4): composer/new chat partial (Gemini quota)
+  * web(w1): 1:1 design tokens, UI primitives, settings shell, and Geral/Aparência/Browser/Atalhos/Atualizações/Sobre
+  * chore(release): start 0.6.20
+  * fix(web): listen backlog holds a page-load burst on Windows
+  * fix(web): listen backlog holds a page-load burst on Windows
 
   </details>
