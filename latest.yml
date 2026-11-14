@@ -1,26 +1,199 @@
-version: 0.6.18
+version: 0.6.19
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.18/Keystone-Studio-0.6.18-x64.exe
-    sha512: Vvb/dXPGHYReE1e2Hi3qmlX3qHeFOrLGCS++un4iYov2wB10RlWibTVW/n1XeHOg1QCavF6p6WbqLxO9sGuFSg==
-    size: 600949412
-releaseDate: '2026-11-07T01:13:08Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.19/Keystone-Studio-0.6.19-x64.exe
+    sha512: DN88RsjmZFq9JgypLsYw6lEQvR7vRvYHsPscGxc83uqnB2GHrpwNY3tUksMAWa/rtnFX7SUyfjcBmqzzdBWERA==
+    size: 605205046
+releaseDate: '2026-11-14T01:47:38Z'
 releaseNotes: |
-  **v0.6.18** · 5 mudanças de 1 colaborador
+  **v0.6.19** · 178 mudanças de 1 colaborador
 
-  - **Atualização que não quebra por falta de espaço.** O Studio e o instalador conferem o espaço livre antes de mexer na versão instalada; sem espaço, a atualização é recusada e a versão atual continua funcionando.
-  - **Menos disco com backups.** A atualização guarda só 2 backups dos bancos (o anterior e o novo) e poda os antigos antes de copiar.
-  - **Auditoria DB mais resistente.** Um arquivo inexistente no código publicado ou uma mudança no catálogo do banco não derrubam mais a sessão da auditoria; o agente renova o status e continua.
-  - **Buscas no código mais rápidas.** O guia da base orienta o agente a descer até o aplicativo e o pacote antes de pesquisar, em vez de varrer a release inteira.
+  - **Computadores remotos.** Abra o Studio de outro computador pela Tailscale, pela rede local ou por SSH, em Configurações → Conexões, como nos Environments do T3 Code.
+  - **Cliente web mais completo.** O navegador ganha anexos e colagem grande durante o turno, aprovações e fila, provedores, browser, arquivos, terminal e agentes, mais perto do desktop.
+  - **Auditoria DB com arquivos do host.** Com a aprovação de host, o agente navega diretórios, lê arquivos e percorre o journal pelo VRMonitor, somente leitura.
+  - **Títulos por modelo e interface polida.** As conversas ganham títulos escritos por um modelo. O chat, o composer e os temas foram polidos, e uma nova versão agora é anunciada com suas novidades.
 
-  ### Mais 3 correções e melhorias de desempenho.
+  ### Mais 98 correções e melhorias de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * fix(audit): preserve sessions across schema and source misses
-  * fix(updates): keep two update backups and prune before copying
-  * fix(updates): refuse an update that does not fit on the disk
-  * chore(release): start 0.6.18
-  * feat(vr): keep text searches off the release root in the base guide
+  * fix(audit): break the host files import cycle and keep brand literals central
+  * docs(audit): native host files and journal through the Monitor
+  * feat(audit): read host files by block and by seek
+  * feat(audit): implement host directory list, file find and journal executor
+  * test(audit): host file tools keep native and MCP parity and isolation
+  * feat(audit): host files executor plumbing, open and resolve
+  * feat(audit): add native Monitor files transport and contract
+  * feat(audit): define host file tool specs, presentation, and audit guide
+  * feat(audit): persist host collection state and local artifacts
+  * fix(sidebar): conversation cards and project filter follow t3 again
+  * fix(updates): the update popup uses the theme's brand accent
+  * docs: record the t3 nightly parity fixes of 13/11
+  * feat(updates): t3 release notes popover and an "update available" popup
+  * fix(composer): paste, recall, titles, attachments and zoom follow t3 nightly
+  * fix(providers): update advice, defaults and Claude skills follow t3 nightly
+  * fix(browser,web): browser tools and web access follow t3 nightly
+  * fix(queue,schedules): turn queue, resume and schedules follow t3 nightly
+  * fix(orchestrator): thread tools follow t3 nightly budgets and replies
+  * feat(ui): theme previews are T3 Code orbs
+  * fix(opencode): audit refusal reasons take the product name from core.brand
+  * fix: agents see the real schedule permission; OpenCode audit refusals name the cause
+  * fix(opencode): session approvals take effect; agent=plan restricts audits
+  * fix(updates): keep the product name out of the helper template comment
+  * fix(codex): a resumed thread's token usage no longer hijacks the new turn
+  * fix(updates): reopen the Studio when the old process outlives the helper wait
+  * docs: keep validation files inside .test-tmp; decompilation extraction plan
+  * fix: whole-codebase bug audit (desktop, web, providers, orchestrator, storage)
+  * fix(tests): retain Qt ownership cleanup for imported wrapped fixtures
+  * fix(ui): text generation settings read the driver list once, outside the model binding
+  * feat: automatic text generation model is the most used one; audits get model titles
+  * feat: model-written thread titles, Antigravity runtime row, black VR Code dark
+  * fix(ui): top edge fade no longer shades the first message
+  * fix: web composer paints Markdown and spelling again; safe context record bytes
+  * feat(ui): t3 conversation cards, details automations and question answers by Enter
+  * feat(ui): colour rounds 39–42 — accent, status and syntax colour restored
+  * feat(ui): reference rounds 36–38 — council at 10/10 in every category
+  * feat(ui): reference round 35 — council at 9.5 in every category
+  * feat(ui): reference round 34 — first message closer under the title bar, scroll-thumb hierarchy
+  * feat(ui): reference round 33 — 13px inline code, trailing in-card chevrons, more footer air
+  * feat(ui): reference round 32 — editor scrollbar on its edge, ~26px after code cards, 13px code
+  * feat(ui): reference rounds 30–31 — whole-row settings sections, list lead-ins on cadence, neutral quotes
+  * feat(ui): reference rounds 28–29 — clean settings edges, one placeholder ink, quieter narrow composer
+  * feat(ui): reference rounds 26–27 — whole-row settings edges, even composer tray, steady brand row
+  * feat(ui): reference round 25 — whole action row, rounded edge cards, calmer code
+  * feat(ui): reference round 24 — whole-line chat edges, overlay scrollbars, labelled credentials
+  * feat(ui): reference round 23 — hard composer edge, quieter composer row, tighter Markdown
+  * feat(ui): reference round 22 — scroll disc beside the composer, one accent, one-line provider status
+  * feat(ui): reference round 21 — short edge fades, flush answer actions, value cue on switches
+  * fix(ui): keep custom effort labels, translate only the stock ones
+  * feat(ui): reference round 20 — centered column, shorter composer, kept line breaks
+  * feat(ui): reference round 19 — scroll disc on clear canvas, lighter composer, filled image tile
+  * feat(ui): reference round 18 — neutral switches, clear scroll disc, firmer utilities
+  * feat(ui): reference round 17 — soft composer band, quiet margin note, flat theme swatches
+  * feat(ui): reference round 16 — readable answer end, code at its set size, quieter chrome
+  * feat(ui): reference round 15 — margin-note context, prose over code, white light canvas
+  * fix(chat): request_secret card on the desktop, as on the web
+  * fix(timeline): cover the black frame of the first timeline show
+  * fix(archive): audits are grouped and named by client, as in the sidebar
+  * fix(providers): the model slug width follows the row, not its own layout
+  * fix(startup): a normal start opens once at the full window size
+  * fix(claude): Fable 5.2, legacy generations and usage limits that did not arrive
+  * fix(startup): start the preload pools on a Qt thread, not a Python worker
+  * fix(web): take the product name from the brand profile in new texts
+  * fix(web): connect the browser surface request to the browser bridge
+  * feat(web): global approvals, queue reorder, media viewer and chat parity
+  * feat(web): add file references, tree search, terminal sessions and agent controls
+  * fix(web): scope the startup work summary to visible conversations
+  * feat(web): attach files and recall prompts during a turn
+  * feat(web): browser surface on demand, layout and HTML artifact replay
+  * feat(web): restore global sidebar and page parity
+  * feat(web): provider accounts, maintenance and model groups in settings
+  * feat(profiles): focus the Especialista profile on database, schema and code analysis
+  * test(context): wait for the history reload before checking the self chip
+  * test(ssh): the PAIR channel fixture counts its temp as this account's
+  * fix(composer): attach images while the agent is thinking (t3 parity)
+  * fix(remote): implementation audit round (N1-N32)
+  * test: the Tailscale guard answers 'not installed' and stays last in probe_guards
+  * feat(remote): SSH computers (T3 parity) and environment docs
+  * fix(remote): client-side audit findings, node-pinned identity and LAN routes
+  * fix(remote): host-side audit findings and LAN access (T3 parity)
+  * fix(context): a conversation dropped on a new chat becomes a chip
+  * feat(sidebar): a dragged conversation follows the pointer as a pill
+  * fix(remote,code,context): audit round 10 follow-ups
+  * fix(remote,context): audit round 9 of the Tailscale access and snoozes
+  * fix(code): an atomic write waits out a transient Windows sharing violation
+  * fix(context): reference refresh keeps snoozes, batches reads, loads once
+  * fix(context): a reference refresh never resets the open page selection
+  * fix(remote): the real probe works; Tailscale-only access hardened
+  * fix(remote): product name in remote-computer copy comes from core.brand
+  * fix(context): reference changes reach the sidebar, children, loads and the web
+  * fix(providers): a running update stays visible to its starter; stale announcements clear
+  * feat(web): enforce Tailscale-only remote access and environment probe
+  * feat(remote): add Tailscale-only remote Studio computers
+  * test(timeline): the startup-draft preload check targets the opened conversation
+  * feat(settings): retire the dependencies screen
+  * fix(providers): update status scoped to its executable; installs wait for updates
+  * fix(context): rename, archive, trash and delete refresh every view of the target
+  * fix(context): inline code spans never cross a line break
+  * fix(composer): one pass for selection chips; links in code fences stay literal
+  * fix(context): every rename retires stale titles in cached timelines
+  * fix: one updater per executable across server binds; fork replay keeps its point
+  * fix(web): pasted foreign chips paint as unavailable; valid spell-check lang
+  * fix(context): revealed children on the web, recordless stored chips, rename while running
+  * fix: fork recovery keeps its cut; a server-bound starter keeps its state
+  * fix(composer): a selection deletes only itself; forward delete takes the right chip
+  * refactor(providers): extract the post-update runtime write
+  * fix(providers): the update starter always tracks its new runtime
+  * fix(web): resilient thread links, honest pasted chips, shelf token removal
+  * fix(composer): atomic chips for word delete, selection and undo
+  * fix(context): one read scope and one row read per projection pass
+  * fix(providers): isolate external OpenCode servers from local CLI updates
+  * fix(chat): complete fork recovery and compact legacy ultra sessions
+  * fix(timeline): keep the replay projection free of per-message reads
+  * docs(web): state the T3 attachment limits the client and server now share
+  * fix(chat): inline chips open, delete and render atomically
+  * fix(providers): settle stale account and shared update state
+  * fix(web): align inline context chips and attachments with the server
+  * fix(chat): honor lineage in thread chips and keep web attachment names
+  * fix(chat): thread list and search resolve ancestors from the loaded rows
+  * fix(chat): fork recovery replays the post-create setup
+  * fix(chat): the idle compaction re-reads the current native session
+  * fix(providers): a v1 external Stop aborts the pending prompt
+  * test(chat): the attachment reader fake takes the display names
+  * fix(integration): keep attached names and the cached reset
+  * fix(integration): one reset-visibility rule; chips follow external OpenCode
+  * fix(chat): repair inline context chips and composer attachment state
+  * fix(orchestration): harden thread queue, transfer and idle compaction
+  * Fix inline context reference scope, projection and web attachment limits
+  * fix(providers): keep validated state and reload changed catalogs
+  * fix(providers): keep stored credentials on reset and harden external OpenCode turns
+  * feat(terminal): declare pywinpty and ship ConPTY in the release build
+  * fix(integration): thread chips follow the read scope; guard chip refresh
+  * fix(integration): align mentions, links and composer keys after the merge
+  * fix(integration): reconcile inline context chips with the batch
+  * fix(ui): remove the blank gap after inline context chips
+  * test(ui): compare timeline scroll on the device-pixel grid
+  * fix(integration): fork no longer copies the removed version comparison
+  * fix(provider): report deleted attachments as unavailable
+  * fix(timeline): fade unavailable context chips
+  * feat(web): copy a conversation reference from the sidebar
+  * test(composer): cover UTF-16 chip offsets with astral text
+  * fix(composer): keep large pastes out of the editor layout
+  * fix(integration): reconcile the provider batch with the full gate
+  * fix(context): stabilize queued attachments and web thread mentions
+  * fix(context): keep live titles, edit records and code fences intact
+  * docs: describe the inline context reference contract
+  * feat(web): inline context chips in the composer and timeline
+  * feat(composer): atomic inline context chips
+  * feat(timeline): render inline context chips at their positions
+  * feat(chat): add canonical inline context references
+  * fix(threads): harden search isolation, fork recovery and title refresh
+  * feat(threads): include the child link in delegated task results
+  * fix(threads): cap rename and interrupt to the caller profile
+  * docs(agents): document the t3 thread communication contract
+  * fix(threads): make merge_back replay idempotent
+  * feat(ui): show who sent a message and open the sender
+  * fix(ui): polish integrated batch details
+  * fix(updates): back up only the essential databases
+  * feat(threads): fork a stable run and merge the delta back
+  * feat(providers): keep refused values inline and add plain environment variables
+  * feat(threads): search conversations and manage the queue
+  * feat(threads): read any conversation and persist sender provenance
+  * feat(chat): select multiple VR packages and retire version comparison
+  * feat(providers): add Antigravity sign-in methods and ACP settings
+  * fix(providers): port T3 update-all, compatibility and maintenance checks
+  * fix(ui): keep the chat column in place when the details card opens
+  * feat(providers): connect OpenCode to an external server
+  * fix(providers): align model labels, states and custom editor with t3
+  * feat(providers): sign in to ChatGPT from a Codex instance
+  * feat(settings): move schema indexing into applications and clean up syncs
+  * feat(providers): scroll the provider card like t3 with diagnostic states
+  * feat(providers): compact idle threads
+  * fix(providers): align the add-provider wizard with t3
+  * fix(chat): show text attachments on sent messages
+  * fix(ui): show projectless conversations as Sem projeto
+  * WIP: OpenCode external server connection (unfinished delegate, review critically)
+  * fix(audit): request typed SQL errors from the Monitor
+  * chore(release): start 0.6.19
 
   </details>
