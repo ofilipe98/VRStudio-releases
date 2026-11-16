@@ -1,23 +1,34 @@
-version: 0.6.20-beta.2
+version: 0.6.20-beta.3
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.2/Keystone-Studio-0.6.20-beta.2-x64.exe
-    sha512: iLFwSsdgpQjX8zDhDMyVAynMwDbV9ZV2FIqzSsLrTXJ03foJgxnV8uEHpKw92P03BKwUOwfiAu9PgXcHR3N+kA==
-    size: 605809193
-releaseDate: '2026-11-15T14:47:35Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.3/Keystone-Studio-0.6.20-beta.3-x64.exe
+    sha512: 3M7PZy4jINE199lnCFW6daz+jqNr2E6LR2U/tMGrPbeoo4/9tLV1vBDaLUOeqSLYv5dJXe1vfmZbHmG0QWa1jQ==
+    size: 610551139
+releaseDate: '2026-11-16T20:30:23Z'
 releaseNotes: |
-  **v0.6.20-beta.2** · 4 mudanças de 1 colaborador
+  **v0.6.20-beta.3** · 13 mudanças de 1 colaborador
 
-  - **Desempenho.** Faster startup preload, sync progress, screenshots and switching.
-  - **Interface.** Handoff placement, OpenCode title flags, t3-level notice surfaces.
-  - **Provedores.** CLIs found without restart, readable light-theme Markdown, t3 Codex setup.
-  - **Theme.** VR Code dark swaps the chat canvas and sidebar shades.
+  - **Estabilidade.** Corrige o fechamento inesperado do Studio (falha em python312.dll) durante travamentos da interface; uma falha nativa agora deixa as pilhas em logs/native-crash.log.
+  - **Desempenho.** A árvore de agentes, o inventário do índice de código e a lista de ferramentas da conversa deixam de travar a interface em bases grandes e turnos longos.
+  - **Retomada.** O trabalho pendente após reiniciar aparece só dentro de cada conversa (aviso Retomar e fila segurada), sem cartão na barra lateral.
+  - **Tarefas e citações.** Ciclo de vida das tarefas delegadas mais robusto e controles iguais no desktop e na web; o destaque de uma citação dura até a mensagem aparecer.
+
+  ### Mais 10 correções e melhorias de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * perf: faster startup preload, sync progress, screenshots and switching
-  * fix(ui): handoff placement, OpenCode title flags, t3-level notice surfaces
-  * fix(providers): CLIs found without restart, readable light-theme Markdown, t3 Codex setup
-  * fix(theme): VR Code dark swaps the chat canvas and sidebar shades
+  * test(audit): let the scope watcher see the simulated account switch
+  * fix(timeline): time the citation highlight from the reveal, not the click
+  * perf(timeline): reuse settled work entry views during tool-heavy turns
+  * perf(code): keep the index inventory when a reader opens processing.sqlite
+  * perf(agent-tree): probe agent cards by index instead of scanning all events
+  * fix(telemetry): stop walking other threads' frames in the ui_stall sampler
+  * fix(sidebar): keep the mode badge in place when hovering a card
+  * test(timeline): give the fresh-process Chromium scenario a 360 s guard
+  * fix(ui): drop the startup pending-work card from the sidebar
+  * fix(orchestration): harden task lifecycle and align desktop/web controls
+  * fix(ui): refine archive actions, package lists and close controls
+  * refactor: remove obsolete Ultra and decompilation test scaffolding
+  * fix: prevent Qt owner-thread crashes and audit lease deadlocks
 
   </details>
