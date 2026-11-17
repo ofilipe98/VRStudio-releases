@@ -1,34 +1,25 @@
-version: 0.6.20-beta.3
+version: 0.6.20-beta.4
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.3/Keystone-Studio-0.6.20-beta.3-x64.exe
-    sha512: 3M7PZy4jINE199lnCFW6daz+jqNr2E6LR2U/tMGrPbeoo4/9tLV1vBDaLUOeqSLYv5dJXe1vfmZbHmG0QWa1jQ==
-    size: 610551139
-releaseDate: '2026-11-16T20:30:23Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.4/Keystone-Studio-0.6.20-beta.4-x64.exe
+    sha512: BYu9Ag0B5ATjQMC3xFXEwukW48ckNWZFh8CP07Lq3bdWjlXz4UUUzuk4R/IiUTaTjBjCe4EeNZaTHio4vU4fug==
+    size: 610576116
+releaseDate: '2026-11-17T01:20:06Z'
 releaseNotes: |
-  **v0.6.20-beta.3** · 13 mudanças de 1 colaborador
+  **v0.6.20-beta.4** · 4 mudanças de 1 colaborador
 
-  - **Estabilidade.** Corrige o fechamento inesperado do Studio (falha em python312.dll) durante travamentos da interface; uma falha nativa agora deixa as pilhas em logs/native-crash.log.
-  - **Desempenho.** A árvore de agentes, o inventário do índice de código e a lista de ferramentas da conversa deixam de travar a interface em bases grandes e turnos longos.
-  - **Retomada.** O trabalho pendente após reiniciar aparece só dentro de cada conversa (aviso Retomar e fila segurada), sem cartão na barra lateral.
-  - **Tarefas e citações.** Ciclo de vida das tarefas delegadas mais robusto e controles iguais no desktop e na web; o destaque de uma citação dura até a mensagem aparecer.
+  - **Abertura mais rápida.** O Studio libera o chat assim que as 20 conversas mais recentes estão prontas, em vez de esperar todo o histórico; as demais continuam carregando em segundo plano, sem travar a interface.
+  - **Inicialização gráfica.** A verificação da placa de vídeo é reaproveitada entre aberturas enquanto drivers e versão não mudam, e componentes usados só pela Auditoria DB carregam quando são necessários.
+  - **Conversas.** Voltar a uma conversa já aberta mantém a visão dela, sem reconstruir a timeline.
+  - **Aviso de atualização.** O cartão "Nova versão disponível" fica inteiro dentro da janela, sem passar da borda inferior.
 
-  ### Mais 10 correções e melhorias de desempenho.
+  ### Mais 3 correções e melhorias de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * test(audit): let the scope watcher see the simulated account switch
-  * fix(timeline): time the citation highlight from the reveal, not the click
-  * perf(timeline): reuse settled work entry views during tool-heavy turns
-  * perf(code): keep the index inventory when a reader opens processing.sqlite
-  * perf(agent-tree): probe agent cards by index instead of scanning all events
-  * fix(telemetry): stop walking other threads' frames in the ui_stall sampler
-  * fix(sidebar): keep the mode badge in place when hovering a card
-  * test(timeline): give the fresh-process Chromium scenario a 360 s guard
-  * fix(ui): drop the startup pending-work card from the sidebar
-  * fix(orchestration): harden task lifecycle and align desktop/web controls
-  * fix(ui): refine archive actions, package lists and close controls
-  * refactor: remove obsolete Ultra and decompilation test scaffolding
-  * fix: prevent Qt owner-thread crashes and audit lease deadlocks
+  * fix(timeline): never rebuild the live document of a conversation already shown
+  * test: wait for conditions instead of durations in three load-sensitive tests
+  * perf(startup): open the chat after the recent conversations, cache the GPU probe
+  * fix(updates): keep the update popup inside the window after it slides in
 
   </details>
