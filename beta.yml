@@ -1,25 +1,23 @@
-version: 0.6.20-beta.5
+version: 0.6.20-beta.6
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.5/Keystone-Studio-0.6.20-beta.5-x64.exe
-    sha512: P7tGJ0aTZGQxFHBqj2k2qEystUdXvTn5lrYv6XgU86cjPQwycINgU9uwcXLttjm0mI15FFAoO5e9eV8hq/qHoQ==
-    size: 610627947
-releaseDate: '2026-11-17T19:18:32Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.6/Keystone-Studio-0.6.20-beta.6-x64.exe
+    sha512: G7cUe91zUseDFQ94bFXIq3KRogp+2QrAoOh26hIqpFyNk9V5J8PMmhYa/Jhh1L62xIkkLOZIKnb20NOJ0gOoxA==
+    size: 610630083
+releaseDate: '2026-11-18T04:07:37Z'
 releaseNotes: |
-  **v0.6.20-beta.5** · 4 mudanças de 1 colaborador
+  **v0.6.20-beta.6** · 2 mudanças de 1 colaborador
 
-  - **Composer como o do T3.** Modelo e esforço num só botão ("GPT-6.1-Sol Alto"), anexar à esquerda, permissões só quando diferem do padrão, e o seletor de modelo reúne a coluna de esforço, a velocidade e as permissões. Esforço e permissões continuam ajustáveis durante a resposta.
-  - **Subagentes.** Abrir um subagente não cria mais uma conversa na barra lateral; a conversa do subagente mostra "Subagente de" no topo e o agente pai nos detalhes, para voltar com um clique. O aviso de tarefa concluída já traz o resultado.
-  - **Configurações e menus.** O esforço padrão usa o mesmo seletor do composer, ao lado do modelo, e os menus "⋯" seguem o visual do T3, sem espaços vazios.
-  - **Sem janela de console.** A verificação de versão dos provedores (npm) não abre mais uma janela de CMD.
+  - Barra lateral alinhada ao T3.** Os cartões de conversa medem 240 × 60 px na largura padrão de 256 px.
+  - Seletor de modelos.** O menu ganha fundo translúcido com desfoque e divisórias mais finas. “Mostrar mais” revela os modelos antigos na mesma lista e funciona pelo teclado.
+  - Detalhes da conversa e rodapé.** O cartão de detalhes segue o visual do seletor, e os botões do rodapé mantêm a cor correta ao passar o mouse ou pressionar.
+  - Histórico do chat.** Trocar de conversa preserva o documento já renderizado quando chega um pré-carregamento atrasado.
 
-  ### Mais 1 correção e melhoria de desempenho.
+  ### Mais 2 correções e melhorias de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * feat(subagents): t3 navigation, parent links and inline completion results
-  * feat(usage): spin the refresh icon while limits or history load
-  * feat(composer): match the t3 composer, settings pickers and menus
-  * fix(audit): recover journal logs and support routine catalogs
+  * fix(timeline): preserve rendered conversations across late preloads
+  * fix(ui): match the T3 sidebar cards and model picker
 
   </details>
