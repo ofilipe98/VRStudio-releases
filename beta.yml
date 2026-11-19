@@ -1,21 +1,30 @@
-version: 0.6.20-beta.9
+version: 0.6.20-beta.10
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.9/Keystone-Studio-0.6.20-beta.9-x64.exe
-    sha512: 5KlUfkLK3NSUNiKDv4cMGtJqT0pDlr9nUDNTELhF+xpBB4FiVW+PFKNiSQrqoYW8crQQ2+KGZ/aXUajKSg3DfQ==
-    size: 610789686
-releaseDate: '2026-11-19T13:16:51Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.10/Keystone-Studio-0.6.20-beta.10-x64.exe
+    sha512: Pi+kQ6QfejhxjBnVWOtt1Vz1qWj88ebyc4S/F1WWcrZcUnJlDunG6EvPj9Mo4CL9XGNDH1ucMiX2PWFuTvzYNw==
+    size: 610799525
+releaseDate: '2026-11-19T21:37:14Z'
 releaseNotes: |
-  **v0.6.20-beta.9** · 2 mudanças de 1 colaborador
+  **v0.6.20-beta.10** · 9 mudanças de 1 colaborador
 
-  - **Auditorias grandes sem travar.** Terminar um turno com muitas consultas grandes não congela mais o Studio por segundos: a gravação do histórico visual saiu da thread da interface (3,9 s → 1,4 s com 41 MB de resultados). Abrir uma auditoria grande também não trava mais várias vezes por quase 1 s. O conteúdo exibido e o que o modelo recebe do banco não mudam.
-  - **Rolagem.** Um scroll que não moveu a conversa não solta mais o acompanhamento do fim da resposta.
+  - **Agente VR.** Guia e ESTRUTURA descrevem o código com fatos, sem ordens de busca.
+  - **Timeline.** Folga que encolhe não solta o acompanhamento.
+  - **Interface.** Corretor pt-BR com vários acentos e menu de edição no padrão t3.
+  - **Chat.** Fila como o t3 — sem texto substituto de anexos e lápis no editar.
 
-  ### Mais 2 correções e melhorias de desempenho.
+  ### Mais 4 correções e melhorias de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * perf(chat): fim de turno de auditorias grandes sem travar a interface
-  * fix(timeline): scroll que não moveu nada não solta o acompanhamento
+  * fix(timeline): folga que encolhe não solta o acompanhamento
+  * feat(vr): guia e ESTRUTURA descrevem o código com fatos, sem ordens de busca
+  * fix(ui): corretor pt-BR com vários acentos e menu de edição no padrão t3
+  * fix(chat): fila como o t3 — sem texto substituto de anexos e lápis no editar
+  * test(opencode): catálogo do OpenCode 2 espera --standalone
+  * fix(chat): modo Chat (OFF) sem steer para fontes e código-fonte
+  * fix(opencode): comandos avulsos não usam o serviço compartilhado do OpenCode 2
+  * fix(ui): paridade 1:1 com o t3 no Markdown, composer, dicas e divisória
+  * fix(ui): paridade t3 no landing, cartão, composer e configurações
 
   </details>
