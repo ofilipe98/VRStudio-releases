@@ -1,18 +1,21 @@
-version: 0.6.20-beta.8
+version: 0.6.20-beta.9
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.8/Keystone-Studio-0.6.20-beta.8-x64.exe
-    sha512: A5w8v6TNg0ghNccIMhrdQalo6AY2pdkpNjKYXZpn8KU1ctYxhRFTrNVNRVuk3YC9sM0kuEw04wPRJ1vhPGP9tA==
-    size: 610736856
-releaseDate: '2026-11-19T10:46:53Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.9/Keystone-Studio-0.6.20-beta.9-x64.exe
+    sha512: 5KlUfkLK3NSUNiKDv4cMGtJqT0pDlr9nUDNTELhF+xpBB4FiVW+PFKNiSQrqoYW8crQQ2+KGZ/aXUajKSg3DfQ==
+    size: 610789686
+releaseDate: '2026-11-19T13:16:51Z'
 releaseNotes: |
-  **v0.6.20-beta.8** · 2 mudanças de 1 colaborador
+  **v0.6.20-beta.9** · 2 mudanças de 1 colaborador
 
-  - **Interface.** Rolagem, paleta e animações alinhadas ao t3.
+  - **Auditorias grandes sem travar.** Terminar um turno com muitas consultas grandes não congela mais o Studio por segundos: a gravação do histórico visual saiu da thread da interface (3,9 s → 1,4 s com 41 MB de resultados). Abrir uma auditoria grande também não trava mais várias vezes por quase 1 s. O conteúdo exibido e o que o modelo recebe do banco não mudam.
+  - **Rolagem.** Um scroll que não moveu a conversa não solta mais o acompanhamento do fim da resposta.
+
+  ### Mais 2 correções e melhorias de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * feat(ui): rolagem, paleta e animações alinhadas ao t3
-  * docs: mover a especificação do AGENTS.md para docs/spec/
+  * perf(chat): fim de turno de auditorias grandes sem travar a interface
+  * fix(timeline): scroll que não moveu nada não solta o acompanhamento
 
   </details>
