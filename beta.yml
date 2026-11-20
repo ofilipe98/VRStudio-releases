@@ -1,30 +1,17 @@
-version: 0.6.20-beta.10
+version: 0.6.20-beta.11
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.10/Keystone-Studio-0.6.20-beta.10-x64.exe
-    sha512: Pi+kQ6QfejhxjBnVWOtt1Vz1qWj88ebyc4S/F1WWcrZcUnJlDunG6EvPj9Mo4CL9XGNDH1ucMiX2PWFuTvzYNw==
-    size: 610799525
-releaseDate: '2026-11-19T21:37:14Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.11/Keystone-Studio-0.6.20-beta.11-x64.exe
+    sha512: GuxJaNLs+19cGMETHlUKgT9SgOUA68X83rSe3+g4i644o8fr4RPz17QU7Mu+5wLOau+Xytb+6dR9xyp0hXWl+Q==
+    size: 610802923
+releaseDate: '2026-11-20T02:34:26Z'
 releaseNotes: |
-  **v0.6.20-beta.10** · 9 mudanças de 1 colaborador
+  **v0.6.20-beta.11** · 1 mudança de 1 colaborador
 
-  - **Agente VR.** Guia e ESTRUTURA descrevem o código com fatos, sem ordens de busca.
-  - **Timeline.** Folga que encolhe não solta o acompanhamento.
-  - **Interface.** Corretor pt-BR com vários acentos e menu de edição no padrão t3.
-  - **Chat.** Fila como o t3 — sem texto substituto de anexos e lápis no editar.
-
-  ### Mais 4 correções e melhorias de desempenho.
+  - **Interface.** Composer de vidro do t3, barra de rolagem e abertura mais rápida.
 
   <details>
   <summary>Registro completo</summary>
 
-  * fix(timeline): folga que encolhe não solta o acompanhamento
-  * feat(vr): guia e ESTRUTURA descrevem o código com fatos, sem ordens de busca
-  * fix(ui): corretor pt-BR com vários acentos e menu de edição no padrão t3
-  * fix(chat): fila como o t3 — sem texto substituto de anexos e lápis no editar
-  * test(opencode): catálogo do OpenCode 2 espera --standalone
-  * fix(chat): modo Chat (OFF) sem steer para fontes e código-fonte
-  * fix(opencode): comandos avulsos não usam o serviço compartilhado do OpenCode 2
-  * fix(ui): paridade 1:1 com o t3 no Markdown, composer, dicas e divisória
-  * fix(ui): paridade t3 no landing, cartão, composer e configurações
+  * fix(ui): composer de vidro do t3, barra de rolagem e abertura mais rápida
 
   </details>
