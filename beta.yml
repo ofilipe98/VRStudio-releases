@@ -1,30 +1,21 @@
-version: 0.6.20-beta.12
+version: 0.6.20-beta.13
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.12/Keystone-Studio-0.6.20-beta.12-x64.exe
-    sha512: aj2aZ8Vr6nx4KMyefNtSfKaSZxa8dKOvxtozW6miiJEIQJOL/T19inYSgBAyXYcGOVvje4/VNZ/HqZ4jfMYbRw==
-    size: 610795415
-releaseDate: '2026-11-20T18:58:59Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.13/Keystone-Studio-0.6.20-beta.13-x64.exe
+    sha512: UFZUjeXzbk5yq0f90kAMEoWqRATLyviJl9NPK4+6TQHn8HUhGtV5x5mxAH9CrqVLOkQwCTd1V6485kHTkjpVTw==
+    size: 611476709
+releaseDate: '2026-11-20T21:18:08Z'
 releaseNotes: |
-  **v0.6.20-beta.12** · 9 mudanças de 1 colaborador
+  **v0.6.20-beta.13** · 3 mudanças de 1 colaborador
 
-  - **Fonte Inter na interface.** O Studio agora usa a fonte Inter como padrão no desktop, na timeline e no cliente web (como no T3 Code), com migração automática única do antigo padrão Segoe UI.
-  - **Timeline fluida ao redimensionar.** Conversas longas não travam mais ao redimensionar a janela ou abrir/fechar painéis: mensagens fora da tela pausam a renderização preservando a rolagem e voltam a renderizar quando atualizadas.
-  - **Zoom consistente na timeline.** Ctrl + roda sobre a conversa ou artefatos HTML inline agora ajusta o zoom da interface do Studio, preservando o zoom próprio apenas nas páginas do Browser.
-  - **Visual e composer mais limpos.** Ícones de projeto .ico mais nítidos (sem ampliação de 16 px), remoção do tooltip redundante no seletor de modelo e aposentadoria dos antigos perfis especialistas.
-
-  ### Mais 7 correções e melhorias de desempenho.
+  - **Antigravity.** Paridade 1:1 com o t3 nightly (agy 1.5).
+  - **Chat.** Turno interrompido continua sozinho após reiniciar, como o t3.
+  - **Interface.** Inter sem hinting, texto nítido como no t3.
 
   <details>
   <summary>Registro completo</summary>
 
-  * fix(timeline): artigo pulado com conteúdo novo renderiza de novo
-  * docs(timeline): alturas lembradas são exatas até o rewrap
-  * fix(ui): Inter como fonte da interface, como o t3
-  * fix(timeline): mantém artigos pulados no início e fim do turno
-  * fix(timeline): artigos longe da vista não travam o redimensionamento
-  * fix(ui): aplica zoom do app com Ctrl+roda sobre a timeline
-  * fix(ui): remove tooltip redundante do seletor de modelo
-  * fix(ui): ícone de projeto .ico nítido em vez do quadro de 16 px ampliado
-  * feat(vr): aposenta os perfis especialistas
+  * feat(antigravity): paridade 1:1 com o t3 nightly (agy 1.5)
+  * feat(chat): turno interrompido continua sozinho após reiniciar, como o t3
+  * fix(ui): Inter sem hinting, texto nítido como no t3
 
   </details>
