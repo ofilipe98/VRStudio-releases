@@ -1,26 +1,26 @@
-version: 0.6.20-beta.15
+version: 0.6.20-beta.16
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.15/Keystone-Studio-0.6.20-beta.15-x64.exe
-    sha512: +CJeqZHQhJAXyzrjoy2ABZlFiy+OYnfUSwnXt8rUKTkKBU6ve6W2ZsVadALtmwE3D2SPcleXhLXXD/MWqMJeKw==
-    size: 611708814
-releaseDate: '2026-11-21T15:19:19Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.16/Keystone-Studio-0.6.20-beta.16-x64.exe
+    sha512: KpcTKD3jvS3fet11hiMotkldx9hoX8YH/zv3+YqdpfYLy1BG1TC+7EIAUfEFop97OjvTUmeNfqdQcesJYwWqMA==
+    size: 611749171
+releaseDate: '2026-11-21T19:10:51Z'
 releaseNotes: |
-  **v0.6.20-beta.15** · 8 mudanças de 1 colaborador
+  **v0.6.20-beta.16** · 5 mudanças de 1 colaborador
 
-  - **Startup.** Imports dos bridges junto do preparo do workspace; workspace resolvido uma vez por conversa no pré-carregamento.
-  - **Startup.** Falha ao criar a thread de imports não trava a abertura; testes mais fortes.
-  - **Provedores.** Antigravity 1:1 com o t3 Nightly, login abre o navegador e rolagem encadeada.
+  - **Provedores.** Reduz engasgo ao abrir Provedores e protege payload de erro do Antigravity.
+  - **Interface.** Aplica icone nativo e estilos da janela antes de exibir no Windows.
+  - **Interface.** Renderiza monograma de projeto vetorial e responde a cliques rapidos nos seletores.
+  - **Provedores.** Remove mascara de linha inteira e deixa o scroll continuo.
+
+  ### Mais 1 correção e melhoria de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * docs(perf): registra o commit validado no gate completo (f58bd40a)
-  * test(startup): join sem timeout no fallback de GC e revisão do relatório (conselho R4)
-  * test(startup): ordem do teste de sobreposição exige o fim do preparo; GC restaurado também na falha
-  * test(startup): sobreposição determinística e GC conferido sem ligar o coletor
-  * fix(startup): falha ao criar a thread de imports não trava a abertura; testes mais fortes
-  * perf(startup): imports dos bridges junto do preparo do workspace; workspace resolvido uma vez por conversa no pré-carregamento
-  * docs(perf): auditoria do caminho para um Studio 2x mais rápido
-  * fix(providers): Antigravity 1:1 com o t3 Nightly, login abre o navegador e rolagem encadeada
+  * perf(providers): reduz engasgo ao abrir Provedores e protege payload de erro do Antigravity
+  * fix(ui): aplica icone nativo e estilos da janela antes de exibir no Windows
+  * fix(ui): renderiza monograma de projeto vetorial e responde a cliques rapidos nos seletores
+  * fix(providers): remove mascara de linha inteira e deixa o scroll continuo
+  * fix(providers): corrige loop ao clicar em Entrar e deadlock no login por codigo do Antigravity 1.5
 
   </details>
