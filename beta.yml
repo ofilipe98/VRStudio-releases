@@ -1,40 +1,26 @@
-version: 0.6.20-beta.14
+version: 0.6.20-beta.15
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.14/Keystone-Studio-0.6.20-beta.14-x64.exe
-    sha512: Gn4sS92POcfLz8dr9x+HZmxym5qBB6p0fFm2S4/ADCmpBgtaWw7WGyPzrTiMNEDRjXbmLe5gnCQsq7YSf+3pBw==
-    size: 611712978
-releaseDate: '2026-11-21T02:27:16Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.20-beta.15/Keystone-Studio-0.6.20-beta.15-x64.exe
+    sha512: +CJeqZHQhJAXyzrjoy2ABZlFiy+OYnfUSwnXt8rUKTkKBU6ve6W2ZsVadALtmwE3D2SPcleXhLXXD/MWqMJeKw==
+    size: 611708814
+releaseDate: '2026-11-21T15:19:19Z'
 releaseNotes: |
-  **v0.6.20-beta.14** · 19 mudanças de 1 colaborador
+  **v0.6.20-beta.15** · 8 mudanças de 1 colaborador
 
-  - **Antigravity.** Várias instâncias, cada uma com o próprio login Google (t3 084ad5e1a).
-  - **Provedores.** Geradores de texto do t3 na aba Provedores (W4 concluído).
-  - **Interface Web.** Aba de provedores somente leitura para sessões sem permissão de gestão.
-  - **Provedores.** Recusa versão quebrada no início do turno, sincroniza o advisory do t3 e trava atualizações na máquina.
-
-  ### Mais 8 correções e melhorias de desempenho.
+  - **Startup.** Imports dos bridges junto do preparo do workspace; workspace resolvido uma vez por conversa no pré-carregamento.
+  - **Startup.** Falha ao criar a thread de imports não trava a abertura; testes mais fortes.
+  - **Provedores.** Antigravity 1:1 com o t3 Nightly, login abre o navegador e rolagem encadeada.
 
   <details>
   <summary>Registro completo</summary>
 
-  * fix(providers): Voltar + Conectar atualiza o mesmo gerador (conselho R4 N2)
-  * fix(providers): formulário do gerador travado durante o Conectar (conselho R3 N1)
-  * docs(providers): modo Codex gerenciado do t3 fica fora por invariante de tokens
-  * fix(providers): achados do conselho, rodada 2 (Opus 8.3)
-  * test(antigravity): isolamento de contas e saída da instância selecionada
-  * fix(web): rótulo acessível do provedor sem a nota removida do Antigravity
-  * test(antigravity): chamadas de conta nomeiam a instância; histórico usa o home da instância
-  * feat(antigravity): várias instâncias, cada uma com o próprio login Google (t3 084ad5e1a)
-  * fix(providers): correções do gate completo da paridade
-  * feat(providers): geradores de texto do t3 na aba Provedores (W4 concluído)
-  * fix(providers): conclui a paridade de UI do W1 (Config do assistente, slot padrão, modelos retidos)
-  * wip(providers): W4 geradores de texto (GLM-5.3-Flash, interrompido no limite de uso)
-  * wip(providers): W1 UI parity (GLM-5.3-Flash, interrompido no limite de uso)
-  * fix(providers): admissão não consulta a rede para ler a versão do OpenCode externo
-  * feat(web): aba de provedores somente leitura para sessões sem permissão de gestão
-  * feat(providers): recusa versão quebrada no início do turno, sincroniza o advisory do t3 e trava atualizações na máquina
-  * feat(ui): seletor de projeto da landing 1:1 com o t3 e ícone VR nítido
-  * feat(videos): botão Baixar por linha baixa o vídeo ou a pasta inteira
-  * fix(ui): seletor de modelo abre no lugar e não reordena ao reler o catálogo
+  * docs(perf): registra o commit validado no gate completo (f58bd40a)
+  * test(startup): join sem timeout no fallback de GC e revisão do relatório (conselho R4)
+  * test(startup): ordem do teste de sobreposição exige o fim do preparo; GC restaurado também na falha
+  * test(startup): sobreposição determinística e GC conferido sem ligar o coletor
+  * fix(startup): falha ao criar a thread de imports não trava a abertura; testes mais fortes
+  * perf(startup): imports dos bridges junto do preparo do workspace; workspace resolvido uma vez por conversa no pré-carregamento
+  * docs(perf): auditoria do caminho para um Studio 2x mais rápido
+  * fix(providers): Antigravity 1:1 com o t3 Nightly, login abre o navegador e rolagem encadeada
 
   </details>
