@@ -1,22 +1,22 @@
-version: 0.6.21-beta.1
+version: 0.6.21-beta.2
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.21-beta.1/Keystone-Studio-0.6.21-beta.1-x64.exe
-    sha512: CeooJhuGPD8r4Z0QtQhhLwktxq7tu6QG3eMFJt7IxbOadCzWebkZbbe0LuIXxVg17Duxn+c0VXU6WBxQjomo6w==
-    size: 611959697
-releaseDate: '2026-11-22T19:45:05Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.21-beta.2/Keystone-Studio-0.6.21-beta.2-x64.exe
+    sha512: /lNDb3YiBCpYdc6uCTehjyMpNM+4gHV1di1/APMPui/+LGAl1PdUMJ/skCKF4h6Jl18WvRqufjiV8jj2Ir8VCw==
+    size: 611959082
+releaseDate: '2026-11-23T04:31:39Z'
 releaseNotes: |
-  **v0.6.21-beta.1** · 4 mudanças de 1 colaborador
+  **v0.6.21-beta.2** · 2 mudanças de 1 colaborador
 
-  - **Interface.** Adicionar projeto e Nova conversa em paridade 1:1 com o t3 Nightly.
-  - **Interface.** Nome do produto via core.brand em Adicionar projeto.
-  - **Interface.** Ancora o menu de correcao no ponto do clique direito.
+  - Dicas de filtro de projetos, Adicionar projeto e Nova conversa na barra lateral.
+  - Setas no cabeçalho para voltar e avançar pelas conversas visitadas, inclusive entre projetos.
+  - A timeline mantém a posição do conteúdo ao abrir ou fechar o painel de detalhes.
+
+  ### Mais 1 correção e melhoria de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * fix(ui): nome do produto via core.brand em Adicionar projeto
-  * feat(ui): Adicionar projeto e Nova conversa em paridade 1:1 com o t3 Nightly
-  * fix(ui): ancora o menu de correcao no ponto do clique direito
-  * chore(release): start 0.6.21
+  * feat(ui): adiciona dicas e setas de histórico ao cabeçalho
+  * fix(ui): estabiliza a timeline ao alternar detalhes da conversa
 
   </details>
