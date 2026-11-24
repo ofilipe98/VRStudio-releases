@@ -1,23 +1,21 @@
-version: 0.6.21-beta.5
+version: 0.6.21-beta.6
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.21-beta.5/Keystone-Studio-0.6.21-beta.5-x64.exe
-    sha512: THf0J+e1PyYbNomckHqIfLBV67W+vPd5kf8ZRSTkKnmopo6oa2RvMpbi+1PUiCQzzpunvAftXoX/hB2MfYYXBQ==
-    size: 612120993
-releaseDate: '2026-11-24T16:38:08Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.21-beta.6/Keystone-Studio-0.6.21-beta.6-x64.exe
+    sha512: NlxhqxQtLSo0SvX86MdVqa2TRta+enwrF5A/1v/14712+ZcugZLfmKWH8RRJGvYd8tDjFZpMwkmsJPPK+Fo7Kw==
+    size: 612103438
+releaseDate: '2026-11-24T17:55:59Z'
 releaseNotes: |
-  **v0.6.21-beta.5** · 3 mudanças de 1 colaborador
+  **v0.6.21-beta.6** · 3 mudanças de 1 colaborador
 
-  - **Desempenho na interface.** Troca de conversas, seleção de texto e clique direito no chat ficaram mais fluidos, sem travamentos por varreduras ou limpeza pós-atualização na thread principal.
-  - **Foco e cursor no composer.** O campo de mensagem recupera o foco automaticamente ao sair da tela inicial, fechar configurações do projeto ou reabrir conversas adiadas.
-  - **Configurações → Logs.** Nova aba dedicada aos logs e diagnóstico dentro de Configurações, pesquisável e acessível pela paleta de comandos.
-
-  ### Mais 2 correções e melhorias de desempenho.
+  - **Schema.** Exibe resultado e erros na indexacao e prioriza refresh do cartao.
+  - **Antigravity.** Reatribui handlers ao reutilizar sessão aquecida.
+  - **Vr,audit.** Remove persona do guia VR e limpa steering na Auditoria DB.
 
   <details>
   <summary>Registro completo</summary>
 
-  * test(ui): ajusta testes para aba Logs, deep_storage e animacao do seletor de modelo
-  * fix(ui): restaura foco e cursor no composer após abertura e retorno ao chat
-  * fix(ui): reduz travamentos na troca de threads/seleção, melhora telemetria e adiciona aba Logs
+  * fix(schema): exibe resultado e erros na indexacao e prioriza refresh do cartao
+  * fix(antigravity): reatribui handlers ao reutilizar sessão aquecida
+  * fix(vr,audit): remove persona do guia VR e limpa steering na Auditoria DB
 
   </details>
