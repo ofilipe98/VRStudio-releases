@@ -1,21 +1,31 @@
-version: 0.6.21-beta.6
+version: 0.6.21-beta.7
 files:
-  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.21-beta.6/Keystone-Studio-0.6.21-beta.6-x64.exe
-    sha512: NlxhqxQtLSo0SvX86MdVqa2TRta+enwrF5A/1v/14712+ZcugZLfmKWH8RRJGvYd8tDjFZpMwkmsJPPK+Fo7Kw==
-    size: 612103438
-releaseDate: '2026-11-24T17:55:59Z'
+  - url: https://github.com/ofilipe98/VRStudio-releases/releases/download/v0.6.21-beta.7/Keystone-Studio-0.6.21-beta.7-x64.exe
+    sha512: XsBRx7aqKzPASpHjsSHeR8ohhhlc0+iw8BFk6sQLCHyzK0+mWKc6/rDiNDrrN0u0JR4zc0x6hiwD3YzU/dc3Yw==
+    size: 612421748
+releaseDate: '2026-11-26T00:30:31Z'
 releaseNotes: |
-  **v0.6.21-beta.6** · 3 mudanças de 1 colaborador
+  **v0.6.21-beta.7** · 10 mudanças de 1 colaborador
 
-  - **Schema.** Exibe resultado e erros na indexacao e prioriza refresh do cartao.
-  - **Antigravity.** Reatribui handlers ao reutilizar sessão aquecida.
-  - **Vr,audit.** Remove persona do guia VR e limpa steering na Auditoria DB.
+  - **Browser.** Escolhe o encoder WebM que o FFmpeg oferece na gravacao de aba.
+  - **Claude.** Alinha pin de alias, limites e retomada com t3 e exibe eventos de runtime.
+  - **Codex.** Retoma threads apos reinicio do app-server e corrige limites e historico.
+  - **Antigravity.** Corrige steering, sessoes quebradas e multi-instancia da re-auditoria.
+
+  ### Mais 5 correções e melhorias de desempenho.
 
   <details>
   <summary>Registro completo</summary>
 
-  * fix(schema): exibe resultado e erros na indexacao e prioriza refresh do cartao
-  * fix(antigravity): reatribui handlers ao reutilizar sessão aquecida
-  * fix(vr,audit): remove persona do guia VR e limpa steering na Auditoria DB
+  * fix(browser): escolhe o encoder WebM que o FFmpeg oferece na gravacao de aba
+  * fix(claude): alinha pin de alias, limites e retomada com t3 e exibe eventos de runtime
+  * fix(codex): retoma threads apos reinicio do app-server e corrige limites e historico
+  * fix(antigravity): corrige steering, sessoes quebradas e multi-instancia da re-auditoria
+  * docs(audit): record full regression gate results
+  * fix: resolve VRStudio integration regression blockers
+  * fix(audit): accept Antigravity tool names and summary metadata
+  * fix(claude): corrige bugs criticos e alinha runtime e limites com t3
+  * fix(codex): corrige bugs criticos e alinha protocolo codex 0.159 com t3
+  * fix(antigravity): corrige bugs criticos e alinha resiliencia agy 1.5 com t3
 
   </details>
